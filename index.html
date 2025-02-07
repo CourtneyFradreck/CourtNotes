@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App Template</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <!-- Add this to your header navigation -->
+<header>
+    <h1>Heading</h1>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="blogs.html">Blog</a></li>
+            <li>
+                <button id="theme-toggle" class="theme-toggle">
+                    <span class="light-icon">☀️</span>
+                    <span class="dark-icon">🌙</span>
+                </button>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<!-- Add this JavaScript to a separate file (e.g., theme.js) -->
+<script>
+// Check for saved theme preference, otherwise use system preference
+function getPreferredTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        return savedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+// Function to set theme
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('theme', theme);
+}
+
+// Initialize theme
+document.addEventListener('DOMContentLoaded', () => {
+    // Set initial theme
+    setTheme(getPreferredTheme());
+
+    // Add toggle button listener
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {  // Only if user hasn't manually set theme
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+});
+</script>
+ 
+    <main>
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Welcome to my thoughts!</h2>
+                <p>I basically use this to yap/rant about shit that I like, or shit I don't like. whatever. idk.
+                    <br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius eveniet tempora consectetur quis explicabo ullam fuga qui, ducimus ipsum repellat illo nostrum maiores saepe sed reiciendis. Consectetur cumque fugiat hic!
+                </p>
+                <div class="hero-btns">
+                    <button type="button">Top Yaps</button>
+                    <button type="button">More Recent Yaps</button>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="assets/blog/welcome2zim.jpg" alt="Scary Zim Poster" width="500">
+            </div>
+        </section>
+        <section class="featured-articles">
+            <div class="featured-articles-header">
+                <h2>Featured Articles</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="featured-article">
+                <div class="featured-article-text">
+                    <h3>Article Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
+                    <button>Continue Reading</button>
+                </div>
+                <div class="featured-article-img">
+                    <img src="assets/blog/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
+                </div> 
+            </div>
+            <div class="featured-article">
+                <div class="featured-article-text">
+                    <h3>Article Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
+                    <button>Continue Reading</button>
+                </div>
+                <div class="featured-article-img">
+                    <img src="assets/blog/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
+                </div> 
+            </div>
+            <div class="featured-article">
+                <div class="featured-article-text">
+                    <h3>Article Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
+                    <button>Continue Reading</button>
+                </div>
+                <div class="featured-article-img">
+                    <img src="assets/blog/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
+                </div> 
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <h2>Logo Goes Here</h2>
+        <p>&copy; 2025 I Got To Be The Best. All Rights Reserved</p>
+    </footer>
+</body>
+</html>

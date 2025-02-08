@@ -1,0 +1,105 @@
+---
+title : Home
+layout: 'base.njk'
+---
+
+   
+
+
+<!-- Add this JavaScript to a separate file (e.g., theme.js) -->
+<script>
+// Check for saved theme preference, otherwise use system preference
+function getPreferredTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+        return savedTheme;
+    }
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+}
+
+// Function to set theme
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+        document.documentElement.removeAttribute('data-theme');
+    }
+    localStorage.setItem('theme', theme);
+}
+
+// Initialize theme
+document.addEventListener('DOMContentLoaded', () => {
+    // Set initial theme
+    setTheme(getPreferredTheme());
+
+    // Add toggle button listener
+    const toggleButton = document.getElementById('theme-toggle');
+    toggleButton.addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        setTheme(newTheme);
+    });
+
+    // Listen for system theme changes
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+        if (!localStorage.getItem('theme')) {  // Only if user hasn't manually set theme
+            setTheme(e.matches ? 'dark' : 'light');
+        }
+    });
+});
+</script>
+ 
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Welcome to my thoughts!</h2>
+                <p>I basically use this to yap/rant about shit that I like, or shit I don't like. whatever. idk.
+                    <br>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius eveniet tempora consectetur quis explicabo ullam fuga qui, ducimus ipsum repellat illo nostrum maiores saepe sed reiciendis. Consectetur cumque fugiat hic!
+                </p>
+                <div class="hero-btns">
+                    <button type="button">Top Yaps</button>
+                    <button type="button">More Recent Yaps</button>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="500">
+            </div>
+        </section>
+        <section class="featured-articles">
+            <div class="featured-articles-header">
+                <h2>Featured Articles</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div class="featured-article">
+                <div class="featured-article-text">
+                    <h3>Article Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
+                    <button>Continue Reading</button>
+                </div>
+                <div class="featured-article-img">
+                    <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
+                </div> 
+            </div>
+            <div class="featured-article">
+                <div class="featured-article-text">
+                    <h3>Article Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
+                    <button>Continue Reading</button>
+                </div>
+                <div class="featured-article-img">
+                    <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
+                </div> 
+            </div>
+            <div class="featured-article">
+                <div class="featured-article-text">
+                    <h3>Article Title</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
+                    <button>Continue Reading</button>
+                </div>
+                <div class="featured-article-img">
+                    <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
+                </div> 
+            </div>
+
+        </section>
+   

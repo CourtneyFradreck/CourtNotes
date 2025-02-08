@@ -1,0 +1,64 @@
+---
+title: Blog
+layout: base.njk
+---
+
+            <div class="section container">
+              <h1 class="section-title">Recent articles</h1>
+              <ul role="list" class="articles__list flow">
+                {%- for post in collections.post | reverse -%}
+                <li>
+                  <article class="snippet">
+                    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" class="snippet__image">
+                    <h3 class="snippet__title"><a href="{{ post.url}}">{{ post.data.title }}</a></h3>
+                    <p class="snippet__meta">by <span>{{ post.data.author }}</span> on <span>{{ post.date | postDate}}</span></p>
+                    <p class="snippet__body">{{ post.data.description }}</p>
+                    <a href="{{ post.url }}" class="btn btn--primary">Continue Reading</a>
+                  </article>
+                </li>
+                {%- endfor -%}
+              </ul>
+            </div>
+
+
+    <script>
+        // Check for saved theme preference, otherwise use system preference
+        function getPreferredTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+            localStorage.setItem('theme', theme);
+        }
+        
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set initial theme
+            setTheme(getPreferredTheme());
+        
+            // Add toggle button listener
+            const toggleButton = document.getElementById('theme-toggle');
+            toggleButton.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+        
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {  // Only if user hasn't manually set theme
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        });
+        </script>

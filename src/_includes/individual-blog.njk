@@ -1,0 +1,56 @@
+---
+layout: base.njk
+---
+        <article class="main-article">
+            <div class="container container--narrow flow">
+              <h1 class="article-title">{{ title }}</h1>
+                <figure class="main-article__figure">
+                    <img src="{{ image }}" alt="{{ imageAlt }}">
+                    <figcaption>{{ imageAlt }}</figcaption>
+                </figure>
+
+                {{ content | safe }}
+            </div>
+        </article>
+
+    <script>
+        // Check for saved theme preference, otherwise use system preference
+        function getPreferredTheme() {
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                return savedTheme;
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        
+        // Function to set theme
+        function setTheme(theme) {
+            if (theme === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.removeAttribute('data-theme');
+            }
+            localStorage.setItem('theme', theme);
+        }
+        
+        // Initialize theme
+        document.addEventListener('DOMContentLoaded', () => {
+            // Set initial theme
+            setTheme(getPreferredTheme());
+        
+            // Add toggle button listener
+            const toggleButton = document.getElementById('theme-toggle');
+            toggleButton.addEventListener('click', () => {
+                const currentTheme = document.documentElement.getAttribute('data-theme');
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+        
+            // Listen for system theme changes
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                if (!localStorage.getItem('theme')) {  // Only if user hasn't manually set theme
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        });
+        </script>

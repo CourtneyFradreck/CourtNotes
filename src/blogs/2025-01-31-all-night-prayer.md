@@ -1,3 +1,13 @@
+---
+title: All Night Prayer; A Journey of Faith
+author: Courtney Fradreck
+date: 2025-01-31
+tags: ["post", "event", "prayer", "faith"]
+image: /assets/blog-images/kurwizi.jpg
+imageAlt: Community gathered for all-night prayer
+description: Join us on a journey of faith as our community comes together for an all-night prayer session, seeking spiritual renewal and divine intervention.
+---
+
 # All Night Prayer: A Journey of Faith
 
 ## Introduction

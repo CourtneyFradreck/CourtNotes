@@ -39,6 +39,11 @@
   /* Border colors */
   --border-color: #3a3a3c;
 }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Arial", sans-serif;

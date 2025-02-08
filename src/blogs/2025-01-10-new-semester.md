@@ -2,7 +2,7 @@
 title: New Semester; A Fresh Start
 author: Courtney Fradreck
 date: 2025-01-10
-tags: ["post"]
+tags: ["post", "featured"]
 image: /assets/blog-images/kudhorobha.jpg
 imageAlt: Students starting a new semester
 description: As the new semester begins, it's a great time to set new goals and establish a productive routine. Whether you're a student or a professional, the start of a new term offers a chance to reflect on past experiences and plan for future success.

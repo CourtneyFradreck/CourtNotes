@@ -51,14 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
  
         <section class="hero">
             <div class="hero-text">
-                <h2>Welcome to my thoughts!</h2>
-                <p>I basically use this to yap/rant about shit that I like, or shit I don't like. whatever. idk.
+                <h2>Welcome to the genius realm of my thoughts!</h2>
+                <p>
+                    Yo, this is where I drop the truth and the fire—you know, the art of living larger.
+                    I bring you raw, unfiltered wisdom from the mind of a creative visionary.
                     <br>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius eveniet tempora consectetur quis explicabo ullam fuga qui, ducimus ipsum repellat illo nostrum maiores saepe sed reiciendis. Consectetur cumque fugiat hic!
+                    Step up and feel the passion; everything you hear is a masterpiece in the making.
+                    <br>
+                    I basically use this to yap/rant about shit that I like, or shit I don't like. Whatever. IDK.
+                    I share honest thoughts, spontaneous rants, and a few unexpected insights about life. Enjoy the ride!
                 </p>
                 <div class="hero-btns">
-                    <button type="button">Top Yaps</button>
-                    <button type="button">More Recent Yaps</button>
+                    <button type="button">Favourite Rants</button>
+                    <button type="button">All Rants</button>
+                </div>
                 </div>
             </div>
             <div class="hero-img">
@@ -68,38 +74,19 @@ document.addEventListener('DOMContentLoaded', () => {
         <section class="featured-articles">
             <div class="featured-articles-header">
                 <h2>Featured Articles</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p>
+                <p>Discover my latest hand-picked featured articles below:</p>
             </div>
+            {%- for post in collections.featured | reverse -%}
             <div class="featured-article">
                 <div class="featured-article-text">
-                    <h3>Article Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
-                    <button>Continue Reading</button>
+                    <h3>{{ post.data.title }}</h3>
+                    <p class="article-meta">{{ post.date | postDate }}</p>
+                    <p>{{ post.data.description }}</p>
+                    <button onclick="window.location.href='{{ post.url }}'">Continue Reading</button>
                 </div>
                 <div class="featured-article-img">
-                    <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
+                    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="400">
                 </div> 
             </div>
-            <div class="featured-article">
-                <div class="featured-article-text">
-                    <h3>Article Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
-                    <button>Continue Reading</button>
-                </div>
-                <div class="featured-article-img">
-                    <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
-                </div> 
-            </div>
-            <div class="featured-article">
-                <div class="featured-article-text">
-                    <h3>Article Title</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam voluptas optio est quisquam laboriosam magnam deserunt tempora a recusandae, harum quos nisi repellat nostrum nulla repellendus corporis quo, explicabo sit.</p>
-                    <button>Continue Reading</button>
-                </div>
-                <div class="featured-article-img">
-                    <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="400">
-                </div> 
-            </div>
-
+            {%- endfor -%}
         </section>
-   

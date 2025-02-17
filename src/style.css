@@ -202,6 +202,33 @@ footer {
   transition: transform 0.2s ease;
 }
 
+/*Home Page Responsive */
+@media (max-width: 768px) {
+  section.hero {
+    flex-direction: column;
+    margin: 1rem;
+  }
+  .featured-article {
+    flex-direction: column-reverse;
+    margin: 1rem;
+  }
+
+  .hero-text,
+  .featured-article-text {
+    margin: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+  }
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 /* /////////////////
 BLOG
 ///////////////// */

@@ -1,5 +1,6 @@
 {
   "layout": "individual-blog.njk",
   "author": "Courtney Fradreck",
-  "tags": ["post"]
+  "tags": ["post"],
+  "permalink": "/{{ title | slugify }}/"
 }

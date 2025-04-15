@@ -142,6 +142,16 @@ nav ul li a:hover {
 .flow > * + * {
   margin-top: 1.5rem;
 }
+/*blockquote*/
+blockquote {
+  background-color: var(--accent-gray);
+  border-left: 4px solid var(--accent-yellow);
+  padding: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: var(--text-secondary);
+}
+
 footer {
   background-color: var(--primary-color);
   color: var(--text-secondary);

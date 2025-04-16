@@ -50,12 +50,46 @@
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "{{ pageTitle }}",
+  "name": "{{ title }}",
   "url": "{{ pageUrl }}",
-  "description": "{{ pageDescription }}",
+  "description": "{{ description }}",
   "author": {
     "@type": "Person",
     "name": "Courtney Fradreck"
   }
 }
 </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://courtnotes.netlify.app{{ page.url }}"
+      },
+      "headline": "{{ title | safe }}",
+      "description": "{{ description | safe }}",
+      "image": [
+        {% if image and image.indexOf('http') == 0 %}
+          "{{ image }}"
+        {% else %}
+          "https://courtnotes.netlify.app{{ image }}"
+        {% endif %}
+      ],
+      "author": {
+        "@type": "Person",
+        "name": "{{ author or 'Courtney Fradreck' }}"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "CourtNotes",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://courtnotes.netlify.app/assets/logo.svg"
+        }
+      },
+      "datePublished": "{{ date or '2024-01-01' }}",
+      "dateModified": "{{ date or '2024-01-01' }}"
+    }
+    </script>
+    

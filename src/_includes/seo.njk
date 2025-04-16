@@ -1,0 +1,61 @@
+{# Set defaults #}
+{% set title = title or "CourtNotes" %}
+{% set description = description or "Personal blog and knowledge hub by Courtney Fradreck — covering software engineering, coding tips, and life lessons." %}
+{% set author = author or "Courtney Fradreck" %}
+{% set pageUrl = url or "https://courtnotes.netlify.app" %}
+{% set image = image or "/assets/logo.svg" %}
+{% set imageAlt = imageAlt or "CourtNotes site logo" %}
+{% set fullImage %}{% if image and image.indexOf('http') == 0 %}{{ image }}{% else %}{{ pageUrl }}{{ image }}{% endif %}{% endset %}
+
+
+
+
+{# Meta tags for SEO #}
+<title>{{ title }}</title>
+<meta name="description" content="{{ description }}">
+<meta name="author" content="{{ author }}">
+<meta name="keywords" content="notes, personal, blog, courtney fradreck, reflections, software engineering, learning, tech, growth">
+
+{# Canonical link #}
+<link rel="canonical" href="{{ page.url | url | default(pageUrl) }}">
+
+<!-- Theme Colors for Light and Dark -->
+<meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+
+{# Open Graph for social previews #}
+<meta property="og:title" content="{{ title }}">
+<meta property="og:description" content="{{ description }}">
+<meta property="og:type" content="article">
+<meta property="og:url" content="{{ page.url | url | default(pageUrl) }}">
+<meta property="og:image" content="{{ fullImage }}">
+<meta property="og:image:alt" content="{{ imageAlt }}">
+<meta property="og:site_name" content="CourtNotes by Courtney Fradreck">
+
+{# Twitter card #}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:description" content="{{ description }}">
+<meta name="twitter:image" content="{{ fullImage }}">
+<meta name="twitter:image:alt" content="{{ imageAlt }}">
+<meta name="twitter:creator" content="@CourtneyFraddy">
+<meta name="twitter:site" content="@CourtneyFraddy">
+
+<!-- Theme Colors for Light and Dark -->
+<meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "{{ pageTitle }}",
+  "url": "{{ pageUrl }}",
+  "description": "{{ pageDescription }}",
+  "author": {
+    "@type": "Person",
+    "name": "Courtney Fradreck"
+  }
+}
+</script>

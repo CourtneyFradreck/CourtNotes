@@ -1,5 +1,13 @@
 const { DateTime } = require("luxon");
 
+// Site metadata
+const siteMetadata = {
+    title: "CourtNotes",
+    description: "A personal note-taking site.",
+    author: "Courtney Fradreck",
+    siteUrl: "https://courtnotes.netlify.app"
+};
+
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/style.css");
@@ -9,6 +17,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
+
+    // Make site metadata available in templates
+    eleventyConfig.addGlobalData("site", siteMetadata);
+
     return {
         dir: {
             input: "src",

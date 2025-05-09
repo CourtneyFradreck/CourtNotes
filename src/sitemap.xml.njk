@@ -1,0 +1,15 @@
+---
+permalink: "sitemap.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
+  {% for page in collections.all %}
+    {% if page.url and page.url != "/404.html" %}
+    <url>
+      <loc>{{ metadata.siteUrl | default("https://courtnotes.netlify.app") }}{{ page.url }}</loc>
+      <lastmod>{{ page.date or "2024-01-01" | date("yyyy-MM-dd") }}</lastmod>
+    </url>
+    {% endif %}
+  {% endfor %}
+</urlset>

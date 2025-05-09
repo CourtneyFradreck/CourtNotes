@@ -1,11 +1,15 @@
 ---
 title: The Month of Love
+description: A reflection on the significance of love in our lives and ways to
+  celebrate it during the month of February.
 author: Courtney Fradreck
 date: 2025-02-01
-tags: ["post", "love", "February"]
-image: /assets/blog-images/kurwizi.jpg
-imageAlt: A symbolic image representing love
-description: A reflection on the significance of love in our lives and ways to celebrate it during the month of February.
+tags:
+  - post
+  - love
+  - February
+image: /assets/blog-images/moth-of-love.png
+imageAlt: A symbolic image representing love. (Moth of Love)
 ---
 
 # The Month of Love

@@ -17,6 +17,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });
+    eleventyConfig.addCollection("featured", function (collectionApi) {
+        return collectionApi.getFilteredByTag("featured");
+    });
+
 
     // Make site metadata available in templates
     eleventyConfig.addGlobalData("site", siteMetadata);

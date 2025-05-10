@@ -1,0 +1,12 @@
+[
+{%- for post in collections.featured | reverse -%}
+  {
+    "title": {{ post.data.title | dump }},
+    "url": {{ post.url | dump }},
+    "date": "{{ post.date | postDate }}",
+    "description": {{ post.data.description | dump }},
+    "image": {{ post.data.image | dump }},
+    "imageAlt": {{ post.data.imageAlt | dump }}
+  }{%- if not loop.last -%},{%- endif -%}
+{%- endfor -%}
+]

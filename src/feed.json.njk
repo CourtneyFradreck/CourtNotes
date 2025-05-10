@@ -2,7 +2,7 @@
 {%- for post in collections.featured | reverse -%}
   {
     "title": {{ post.data.title | dump }},
-    "url": {{ post.url | dump }},
+    "url": "https://courtnotes.netlify.app{{ post.url }}",
     "date": "{{ post.date | postDate }}",
     "description": {{ post.data.description | dump }},
     "image": "https://courtnotes.netlify.app{{ post.data.image | url }}",

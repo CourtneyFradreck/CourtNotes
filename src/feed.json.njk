@@ -5,7 +5,7 @@
     "url": {{ post.url | dump }},
     "date": "{{ post.date | postDate }}",
     "description": {{ post.data.description | dump }},
-    "image": "https://courtnotes.netlify.app{{ post.data.image | url }}"
+    "image": "https://courtnotes.netlify.app{{ post.data.image | url }}",
     "imageAlt": {{ post.data.imageAlt | dump }}
   }{%- if not loop.last -%},{%- endif -%}
 {%- endfor -%}

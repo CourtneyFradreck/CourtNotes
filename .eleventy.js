@@ -14,7 +14,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/individual.css");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/admin/config.yml");
-    eleventyConfig.addPassthroughCopy("_headers");
+    eleventyConfig.addPassthroughCopy({"_headers": "_headers"});
     eleventyConfig.addFilter("postDate", (dateObj) => {
         return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
     });

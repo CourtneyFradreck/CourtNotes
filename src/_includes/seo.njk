@@ -1,8 +1,8 @@
 {# Set defaults #}
-{% set title = title or "CourtNotes" %}
+{% set title = title or metadata.title %}
 {% set description = description or "Personal blog and knowledge hub by Courtney Fradreck — covering software engineering, coding tips, and life lessons." %}
-{% set author = author or "Courtney Fradreck" %}
-{% set pageUrl = url or "https://courtnotes.netlify.app" %}
+{% set author = author or metadata.author %}
+{% set pageUrl = url or metadata.siteUrl %}
 {% set image = image or "/assets/logo.svg" %}
 {% set imageAlt = imageAlt or "CourtNotes site logo" %}
 {% set fullImage %}{% if image and image.indexOf('http') == 0 %}{{ image }}{% else %}{{ pageUrl }}{{ image }}{% endif %}{% endset %}
@@ -14,7 +14,7 @@
 <title>{{ title }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="author" content="{{ author }}">
-<meta name="keywords" content="notes, personal, blog, courtney fradreck, reflections, software engineering, learning, tech, growth">
+<meta name="keywords" content="courtney fradreck, notes, personal, blog, courtney fradreck's blog, reflections, software engineering, learning, tech, growth">
 
 {# Canonical link #}
 <link rel="canonical" href="{{ page.url | url | default(pageUrl) }}">
@@ -30,7 +30,7 @@
 <meta property="og:url" content="{{ page.url | url | default(pageUrl) }}">
 <meta property="og:image" content="{{ fullImage }}">
 <meta property="og:image:alt" content="{{ imageAlt }}">
-<meta property="og:site_name" content="CourtNotes by Courtney Fradreck">
+<meta property="og:site_name" content="CourtNotes by {{ author }}">
 
 {# Twitter card #}
 <meta name="twitter:card" content="summary_large_image">
@@ -55,7 +55,7 @@
   "description": "{{ description }}",
   "author": {
     "@type": "Person",
-    "name": "Courtney Fradreck"
+    "name": "{{ author }}"
   }
 }
 </script>
@@ -78,11 +78,11 @@
       ],
       "author": {
         "@type": "Person",
-        "name": "{{ author or 'Courtney Fradreck' }}"
+        "name": "{{ author or metadata.author }}"
       },
       "publisher": {
         "@type": "Organization",
-        "name": "CourtNotes",
+        "name": "{{ title }}",
         "logo": {
           "@type": "ImageObject",
           "url": "https://courtnotes.netlify.app/assets/logo.svg"

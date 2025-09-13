@@ -1,8 +1,10 @@
 ---
 title: Africa University – The Valley of Dreams?
-description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-  interdum posuere nibh in luctus. Sed convallis, magna congue rhoncus laoreet,
-  lorem ante aliquet mi, id facilisis nunc mauris sit amet nisl.
+description: "At Africa University, the valley of dreams isn’t just a
+  slogan—it’s a journey. This post explores how AU reshapes lives beyond
+  academics: through faith, community, language, and challenge. If you're
+  curious how a place can nurture your spirit, stretch your perspective, and
+  help you grow with purpose, this reflection is for you."
 author: Courtney
 date: 2025-09-13T13:17:00.000+02:00
 tags:

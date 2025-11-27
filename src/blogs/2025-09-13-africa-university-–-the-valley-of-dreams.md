@@ -10,7 +10,7 @@ date: 2025-09-13T13:17:00.000+02:00
 tags:
   - post
   - featured
-image: https://aunews.africau.edu/wp-content/uploads/2022/06/DJI_0185-800x445.jpg
+image: /assets/blog-images/chapel.jpg
 imageAlt: Overhead Image of Africa University
 ---
 

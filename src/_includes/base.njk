@@ -7,6 +7,19 @@
     <!--seo.njk-->
     {% include 'seo.njk' %}
     <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon">
+    <script>
+        (function() {
+            const theme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (theme) {
+                document.documentElement.setAttribute('data-theme', theme);
+            } else if (prefersDark) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        })();
+    </script>
     <link rel="stylesheet" href="/style.css">
     <script defer src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
@@ -29,19 +42,6 @@
             document.documentElement.setAttribute('data-theme', theme);
             localStorage.setItem('theme', theme);
         };
-
-        // Initialize theme
-        const currentTheme = localStorage.getItem('theme');
-        if (currentTheme) {
-            document.documentElement.setAttribute('data-theme', currentTheme);
-        } else {
-            // If no stored preference, use system preference
-            if (prefersDarkScheme.matches) {
-                document.documentElement.setAttribute('data-theme', 'dark');
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
-        }
 
         // Toggle event listener
         if (toggleBtn) {

@@ -7,6 +7,7 @@
 
   /* Accent colors */
   --accent-yellow: #ffd60a;
+  --accent-yellow-text: #856900;
   --accent-yellow-hover: #ffe55c;
   --accent-gray: #e5e5ea;
   --accent-gray-hover: #d1d1d6;
@@ -28,6 +29,7 @@
 
   /* Accent colors */
   --accent-yellow: #ffd60a;
+  --accent-yellow-text: #ffd60a;
   --accent-yellow-hover: #ffc60a;
   --accent-gray: #3a3a3c;
   --accent-gray-hover: #48484a;
@@ -39,6 +41,7 @@
   /* Border colors */
   --border-color: #3a3a3c;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -139,9 +142,10 @@ nav ul li a:hover {
 }
 
 /* Flow class for potential content styling */
-.flow > * + * {
+.flow>*+* {
   margin-top: 1.5rem;
 }
+
 /*blockquote*/
 blockquote {
   background-color: var(--accent-gray);
@@ -154,7 +158,7 @@ blockquote {
 
 /* links */
 a.link {
-  color: var(--accent-yellow);
+  color: var(--accent-yellow-text);
   text-decoration: underline;
 }
 

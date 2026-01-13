@@ -4,5 +4,7 @@ node_modules
 node_modules/
 
 # build artefacts
-public
+public/*
 css
+
+!public/google61f2055e7b523a30.html

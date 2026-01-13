@@ -152,6 +152,12 @@ blockquote {
   color: var(--text-secondary);
 }
 
+/* links */
+a.link {
+  color: var(--accent-yellow);
+  text-decoration: underline;
+}
+
 footer {
   background-color: var(--primary-color);
   color: var(--text-secondary);

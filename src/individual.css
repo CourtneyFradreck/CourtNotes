@@ -141,6 +141,27 @@ nav ul li a:hover {
   filter: brightness(0.8) contrast(1.2);
 }
 
+/* List Styling */
+.main-article ul,
+.main-article ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.main-article li {
+  margin-bottom: 0.5rem;
+}
+
+.main-article ul li::marker {
+  color: var(--accent-yellow-text);
+}
+
+.main-article ol li::marker {
+  color: var(--accent-yellow-text);
+  font-weight: bold;
+}
+
 /* Flow class for potential content styling */
 .flow>*+* {
   margin-top: 1.5rem;
@@ -160,6 +181,15 @@ blockquote {
 a.link {
   color: var(--accent-yellow-text);
   text-decoration: underline;
+}
+
+/* Portrait video styling */
+.video-portrait {
+  max-height: 500px;
+  width: auto;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 footer {

@@ -60,35 +60,91 @@ header {
   background-color: var(--primary-color);
   color: var(--text-primary);
   text-align: center;
-  padding: 1rem;
+  padding: 1rem 2rem;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom: 1px solid var(--border-color);
   transition: background-color 0.3s ease, border-color 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.logo img {
+  height: 32px;
+  width: auto;
 }
 
 nav ul {
   display: flex;
-  justify-content: center;
+  align-items: center;
   list-style: none;
+  gap: 1.5rem;
 }
 
 nav ul li {
-  margin: 0 15px;
+  margin: 0;
 }
 
 nav ul li a {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: larger;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li a[aria-current="page"] {
+  color: var(--accent-yellow);
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  background: transparent;
   color: var(--text-primary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background-color: var(--accent-gray);
+  transform: none;
+}
+
+.theme-toggle svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.theme-toggle .dark-icon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .light-icon {
+  display: none;
+}
+
+[data-theme="dark"] .theme-toggle .dark-icon {
+  display: block;
 }
 
 /* Individual Blog Page Styles */

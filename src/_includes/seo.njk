@@ -2,10 +2,10 @@
 {% set title = title or metadata.title %}
 {% set description = description or "Personal blog and knowledge hub by Courtney Fradreck — covering software engineering, coding tips, and life lessons." %}
 {% set author = author or metadata.author %}
-{% set pageUrl = url or metadata.siteUrl %}
 {% set image = image or "/assets/logo.svg" %}
 {% set imageAlt = imageAlt or "CourtNotes site logo" %}
-{% set fullImage %}{% if image and image.indexOf('http') == 0 %}{{ image }}{% else %}{{ pageUrl }}{{ image }}{% endif %}{% endset %}
+{% set absolutePageUrl = page.url | absoluteUrl(metadata.siteUrl) %}
+{% set fullImage %}{% if image and image.indexOf('http') == 0 %}{{ image }}{% else %}{{ image | absoluteUrl(metadata.siteUrl) }}{% endif %}{% endset %}
 
 
 
@@ -17,7 +17,7 @@
 <meta name="keywords" content="courtney fradreck, notes, personal, blog, courtney fradreck's blog, reflections, software engineering, learning, tech, growth">
 
 {# Canonical link #}
-<link rel="canonical" href="{{ metadata.siteUrl }}{{ page.url }}">
+<link rel="canonical" href="{{ absolutePageUrl }}">
 
 <!-- Theme Colors for Light and Dark -->
 <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
@@ -27,7 +27,7 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="{{ metadata.siteUrl }}{{ page.url }}">
+<meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:image" content="{{ fullImage }}">
 <meta property="og:image:alt" content="{{ imageAlt }}">
 <meta property="og:site_name" content="CourtNotes by {{ author }}">
@@ -49,7 +49,7 @@
   "@context": "https://schema.org",
   "@type": "Blog",
   "name": "{{ title }}",
-  "url": "{{ pageUrl }}",
+  "url": "{{ absolutePageUrl }}",
   "description": "{{ description }}",
   "author": {
     "@type": "Person",
@@ -63,17 +63,11 @@
       "@type": "BlogPosting",
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": "https://courtnotes.netlify.app{{ page.url }}"
+        "@id": "{{ absolutePageUrl }}"
       },
       "headline": "{{ title | safe }}",
       "description": "{{ description | safe }}",
-      "image": [
-        {% if image and image.indexOf('http') == 0 %}
-          "{{ image }}"
-        {% else %}
-          "https://courtnotes.netlify.app{{ image }}"
-        {% endif %}
-      ],
+      "image": ["{{ fullImage }}"],
       "author": {
         "@type": "Person",
         "name": "{{ author or metadata.author }}"
@@ -83,7 +77,7 @@
         "name": "{{ title }}",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://courtnotes.netlify.app/assets/logo.svg"
+          "url": "{{ '/assets/logo.svg' | absoluteUrl(metadata.siteUrl) }}"
         }
       },
       "datePublished": "{{ date or '2024-01-01' }}",

@@ -25,6 +25,13 @@ module.exports = function (eleventyConfig) {
         return DateTime.fromJSDate(dateObj).toFormat(format);
     });
 
+    // URL helper to safely join base URL and path
+    eleventyConfig.addFilter("absoluteUrl", (path, base) => {
+        const baseUrl = (base || siteMetadata.siteUrl).replace(/\/+$/, "");
+        const pagePath = path ? (path.startsWith("/") ? path : "/" + path) : "/";
+        return baseUrl + pagePath;
+    });
+
     eleventyConfig.addCollection("featured", function (collectionApi) {
         return collectionApi.getFilteredByTag("featured");
     });

@@ -17,7 +17,7 @@
 <meta name="keywords" content="courtney fradreck, notes, personal, blog, courtney fradreck's blog, reflections, software engineering, learning, tech, growth">
 
 {# Canonical link #}
-<link rel="canonical" href="{{ page.url | url | default(pageUrl) }}">
+<link rel="canonical" href="{{ metadata.siteUrl }}{{ page.url }}">
 
 <!-- Theme Colors for Light and Dark -->
 <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
@@ -27,7 +27,7 @@
 <meta property="og:title" content="{{ title }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:type" content="article">
-<meta property="og:url" content="{{ page.url | url | default(pageUrl) }}">
+<meta property="og:url" content="{{ metadata.siteUrl }}{{ page.url }}">
 <meta property="og:image" content="{{ fullImage }}">
 <meta property="og:image:alt" content="{{ imageAlt }}">
 <meta property="og:site_name" content="CourtNotes by {{ author }}">

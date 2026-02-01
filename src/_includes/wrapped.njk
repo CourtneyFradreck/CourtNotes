@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2025 Wrapped — CourtNotes</title>
+    <meta name="description" content="Courtney Fradreck's 2025 year in review — from curiosity to commitment.">
+    <link rel="shortcut icon" href="/assets/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/wrapped.css">
+</head>
+<body class="wrapped-page">
+    {% include 'header.njk' %}
+
+    <main>
+        {{ content | safe }}
+    </main>
+
+    <script>
+        // Fade-in on scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        document.querySelectorAll('.wrapped-section, .highlight-card, .wrapped-closing').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Theme toggle (keep functional but always dark on this page)
+        const toggleBtn = document.getElementById('theme-toggle');
+        if (toggleBtn) {
+            toggleBtn.style.display = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/style.css");
     eleventyConfig.addPassthroughCopy("src/individual.css");
+    eleventyConfig.addPassthroughCopy("src/wrapped.css");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/admin/config.yml");
     eleventyConfig.addPassthroughCopy({ "_headers": "_headers" });

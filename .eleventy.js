@@ -12,6 +12,7 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("src/assets");
     eleventyConfig.addPassthroughCopy("src/style.css");
     eleventyConfig.addPassthroughCopy("src/individual.css");
+    eleventyConfig.addPassthroughCopy("src/wrapped.css");
     eleventyConfig.addPassthroughCopy("src/admin");
     eleventyConfig.addPassthroughCopy("src/admin/config.yml");
     eleventyConfig.addPassthroughCopy({ "_headers": "_headers" });
@@ -21,9 +22,9 @@ module.exports = function (eleventyConfig) {
     });
 
     // Date filter for sitemap
-    eleventyConfig.addFilter("date", (dateObj, format) => {
-        return DateTime.fromJSDate(dateObj).toFormat(format);
-    });
+    eleventyConfig.addFilter("htmlDateString", (dateObj) => {
+    return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("yyyy-LL-dd");
+  });
 
     // URL helper to safely join base URL and path
     eleventyConfig.addFilter("absoluteUrl", (path, base) => {

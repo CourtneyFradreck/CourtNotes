@@ -547,10 +547,12 @@ footer {
 
   .about-hero-text {
     padding: 1rem;
+    order: 2;
   }
 
   .about-hero-img {
     width: 100%;
+    order: 1;
   }
 
   .about-gallery {

@@ -441,11 +441,65 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.about-cta p {
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-top: 1rem;
+
+.about-apple-music {
+  margin-top: 3rem;
+  padding: 2.5rem;
+  background-color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+.about-apple-music h2 {
   margin-bottom: 1rem;
+}
+
+.apple-music-note {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.apple-music-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.apple-music-card {
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.apple-music-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.apple-music-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.apple-music-card ul,
+.apple-music-card ol {
+  margin-left: 1.25rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.apple-music-card li strong {
+  color: var(--text-primary);
+}
+
+.apple-music-meta {
+  margin-top: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
 }
 
 /* Responsive */
@@ -493,10 +547,12 @@ footer {
 
   .about-hero-text {
     padding: 1rem;
+    order: 2;
   }
 
   .about-hero-img {
     width: 100%;
+    order: 1;
   }
 
   .about-gallery {
@@ -505,5 +561,9 @@ footer {
 
   .about-content {
     padding: 1rem;
+  }
+
+  .apple-music-grid {
+    grid-template-columns: 1fr;
   }
 }

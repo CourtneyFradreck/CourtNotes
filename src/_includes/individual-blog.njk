@@ -20,6 +20,29 @@
                 </figure>
 
                 {{ content | safe }}
+
+                {%- if series %}
+                <nav class="blog-nav">
+                  {%- set nextPost = collections.post | getNextCollectionItem(page) %}
+                  {%- set prevPost = collections.post | getPreviousCollectionItem(page) %}
+                  
+                  {%- if prevPost and prevPost.data.series == series %}
+                    <a href="{{ prevPost.url }}" class="blog-nav__link blog-nav__link--prev">
+                      <span class="blog-nav__label">Previous Chapter</span>
+                      <span class="blog-nav__title">{{ prevPost.data.title }}</span>
+                    </a>
+                  {%- else %}
+                    <div style="flex: 1;"></div>
+                  {%- endif %}
+                  
+                  {%- if nextPost and nextPost.data.series == series %}
+                    <a href="{{ nextPost.url }}" class="blog-nav__link blog-nav__link--next">
+                      <span class="blog-nav__label">Next Chapter</span>
+                      <span class="blog-nav__title">{{ nextPost.data.title }}</span>
+                    </a>
+                  {%- endif %}
+                </nav>
+                {%- endif %}
             </div>
         </article>
     </main>

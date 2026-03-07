@@ -315,4 +315,5 @@ footer {
 .blog-nav__title {
   font-weight: bold;
   font-size: 1rem;
+  color: var(--accent-yellow-text);
 }

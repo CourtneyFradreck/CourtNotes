@@ -1,6 +1,6 @@
 ---
-title: 2025 in Rewind (April–August)
-description: 2025 in Rewind (April–August)
+title: 2025 in Rewind (May–August)
+description: 2025 in Rewind (May–August)
 author: Courtney Fradreck
 date: 2025-12-25T10:00:00.000+02:00
 tags:
@@ -9,10 +9,7 @@ tags:
 image: /assets/blog-images/img-20250125-wa0038~2-1-.jpg
 imageAlt: Courtney
 ---
-
-
-
-# 2025 in Rewind (April–August)
+# 2025 in Rewind (May–August)
 
 If the first part of 2025 was about asking *“what if?”*, then April to August was about asking a much harder question:
 

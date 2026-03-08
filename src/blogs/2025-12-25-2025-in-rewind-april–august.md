@@ -8,6 +8,7 @@ tags:
   - featured
 image: /assets/blog-images/img-20250125-wa0038~2-1-.jpg
 imageAlt: Courtney
+series: 2025-rewind
 ---
 # 2025 in Rewind (May–August)
 

@@ -1,5 +1,9 @@
 {# Set defaults #}
-{% set title = title or metadata.title %}
+{% if title and title != "Home" %}
+  {% set seoTitle = title + " | " + metadata.title %}
+{% else %}
+  {% set seoTitle = metadata.title + " | " + metadata.author %}
+{% endif %}
 {% set description = description or "Personal blog and knowledge hub by Courtney Fradreck — covering software engineering, coding tips, and life lessons." %}
 {% set author = author or metadata.author %}
 {% set image = image or "/assets/logo.svg" %}
@@ -11,7 +15,7 @@
 
 
 {# Meta tags for SEO #}
-<title>{{ title }}</title>
+<title>{{ seoTitle }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="author" content="{{ author }}">
 <meta name="keywords" content="courtney fradreck, notes, personal, blog, courtney fradreck's blog, reflections, software engineering, learning, tech, growth">
@@ -24,7 +28,7 @@
 <meta name="theme-color" content="#1c1c1e" media="(prefers-color-scheme: dark)">
 
 {# Open Graph for social previews #}
-<meta property="og:title" content="{{ title }}">
+<meta property="og:title" content="{{ seoTitle }}">
 <meta property="og:description" content="{{ description }}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ absolutePageUrl }}">
@@ -34,7 +38,7 @@
 
 {# Twitter card #}
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ title }}">
+<meta name="twitter:title" content="{{ seoTitle }}">
 <meta name="twitter:description" content="{{ description }}">
 <meta name="twitter:image" content="{{ fullImage }}">
 <meta name="twitter:image:alt" content="{{ imageAlt }}">
@@ -48,7 +52,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Blog",
-  "name": "{{ title }}",
+  "name": "{{ seoTitle }}",
   "url": "{{ absolutePageUrl }}",
   "description": "{{ description }}",
   "author": {
@@ -65,7 +69,7 @@
         "@type": "WebPage",
         "@id": "{{ absolutePageUrl }}"
       },
-      "headline": "{{ title | safe }}",
+      "headline": "{{ seoTitle | safe }}",
       "description": "{{ description | safe }}",
       "image": ["{{ fullImage }}"],
       "author": {
@@ -74,7 +78,7 @@
       },
       "publisher": {
         "@type": "Organization",
-        "name": "{{ title }}",
+        "name": "{{ seoTitle }}",
         "logo": {
           "@type": "ImageObject",
           "url": "{{ '/assets/logo.svg' | absoluteUrl(metadata.siteUrl) }}"

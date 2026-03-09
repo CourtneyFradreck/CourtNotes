@@ -13,149 +13,157 @@ series: 2025-rewind
 
 # 2025 in Rewind (September–December)
 
-If the earlier parts of 2025 were about exploration and foundations, then September to December was about convergence.
+If May to August was about building the foundation, then September to December was about what happens when the foundation meets the real world.
 
 Ideas started meeting reality.
 
 Questions started demanding answers.
 
-And the work I had been quietly doing in the background began to take clearer shape.
+And some things I thought I understood — I had to relearn from scratch.
 
 ---
 
 ## When Reality Slows You Down (In a Good Way)
 
-Earlier in the year, I honestly believed we would build **AgriLease** quickly and get it into farmers’ hands as soon as possible. The startup playbook everyone talks about is simple:
+I'll be honest: I went into this phase expecting speed.
 
-_Build fast. Launch. Fail fast. Iterate._
+The startup playbook everyone talks about is seductive in its simplicity: _build fast, ship fast, fail fast, iterate_. And after the energy of the agri shows, I thought we were close to a real launch.
 
-But after the agricultural shows earlier in the year, something changed.
+But the conversations I had at those shows changed something.
 
-Conversations with farmers and equipment owners helped us understand the **real problem** more deeply — and also the real obstacles people face on the ground. Access, trust, logistics, payments, coordination — the system is much more complex than a pitch deck suggests.
+Talking directly to farmers and equipment owners gave us a much clearer picture of the **real problem** — and more importantly, the real friction people experience on the ground. Access, trust, logistics, informal payment habits, coordination between strangers — the system is far more layered than any pitch deck captures.
 
-Development slowed down.
+Development slowed.
 
-Partly because the problem demanded deeper thinking.  
-Partly because the long holiday was over and **school had resumed**, meaning time suddenly became scarce again.
+Partly because the problem deserved deeper thinking.  
+Partly because the long holiday was over and **school had resumed**, which meant time became scarce in ways I'd forgotten about.
 
-But slowing down wasn’t failure. It was adjustment.
+But slowing down wasn't failure. It was adjustment.
 
 ---
 
 ## September: Back to the Field
 
-On **September 19th and 20th**, I attended the **Manicaland Agricultural Show**. After the experience in Harare, this felt familiar but still exciting — another chance to talk directly to people in agriculture and share what we were building.
+The month opened with the **Manicaland Agricultural Show** on **September 19th and 20th**. After Harare, this felt familiar but no less meaningful — another chance to put AgriLease in front of people who would actually use it, to listen, and to keep refining our understanding of the problem.
 
-<!-- Manicaland Agricultural Show photos here -->
+![Manicaland Agri Show](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Manicaland+Agricultural+Show)
+![At the Booth](https://placehold.co/600x400/f2f2f7/1c1c1e?text=At+the+Booth)
 
-A day later, on **September 21st**, it was my mom’s birthday.
+Then on **September 21st**, it was my mom's birthday.
 
-Instead of buying something ordinary, I decided to build something for her. I stayed up until **3am building a website for her**, trying to make it perfect before the day began. It was a small project compared to everything else happening that season, but one of the most meaningful things I worked on that month.
-
----
-
-## TAG-DEV and the Road to the Challenge
-
-Late September brought another opportunity.
-
-Africa University launched the **TAG-DEV Agri-Innovation & Entrepreneurship Challenge**, a program aimed at supporting agricultural innovations and student entrepreneurs.
-
-The final pitch competition would take place on **November 5th**, so the weeks leading up to it were filled with **webinars, workshops, and training sessions**.
-
-These events focused on things most developers rarely think about:
-
-- pitching ideas clearly
-- understanding intellectual property
-- building sustainable business models
-- communicating innovation beyond technical language
-
-It was a different kind of learning.
+Instead of buying something ordinary, I decided to build something. I stayed up until **3am building her a website** — trying to make it perfect before the day began. It was a small project by any objective measure, but one of the most personal things I built all year. Some of the best work you do isn't for a competition or a deadline. It's for someone you love.
 
 ---
 
-## October: A Month of Movement
+## Late September: TAG-DEV and the Road to the Challenge
 
-October started quickly.
+Towards the end of September, a new opportunity came onto the radar.
 
-On **October 1st**, I co-led a **Google Developer Group (GDG)** event at school.
+Africa University launched the **TAG-DEV Agri-Innovation & Entrepreneurship Challenge** — a structured program designed to support student entrepreneurs working in the agricultural space. The final pitch competition was set for **November 5th**, so from late September through October, there was a steady rhythm of webinars, workshops, and training sessions running in the background of everything else.
 
-The next day, **October 2nd**, we travelled to **Harare for an educational trip** where we visited:
+These weren't the kind of events I would've prioritised earlier in the year — but I was learning that building something real means thinking about a lot more than the code:
+
+- How do you pitch clearly to people who aren't technical?
+- How do you protect what you've built through intellectual property?
+- How do you build something that makes commercial sense, not just technical sense?
+
+Different kind of learning. Equally important.
+
+---
+
+## October: A Month That Didn't Slow Down
+
+October hit the ground running.
+
+**October 1st** — I co-led a **GDG (Google Developer Groups) event** on campus. Coordinating, facilitating, and presenting in front of peers is a different muscle from writing code alone, and one worth developing.
+
+The very next day, **October 2nd**, we were on the road to Harare for an educational trip. We visited:
 
 - **University of Zimbabwe – ZPH**
-- **ZINGSA**
-- **ZCHPC**
+- **ZINGSA** (Zimbabwe National Geospatial and Space Agency)
+- **ZCHPC** (Zimbabwe Centre for High Performance Computing)
 
-The trip exposed us to research environments, innovation labs, and computational infrastructure that most students only hear about in lectures.
+![UZ ZPH Educational Trip](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Educational+Trip+to+Harare)
+![ZINGSA Visit](https://placehold.co/600x400/f2f2f7/1c1c1e?text=ZINGSA+Visit)
+![ZCHPC Visit](https://placehold.co/600x400/f2f2f7/1c1c1e?text=ZCHPC+Visit)
 
-<!-- Educational trip photos here -->
+Seeing research infrastructure and computing environments that most students only read about in textbooks — it opened something up. It's one thing to know these institutions exist. It's another to walk through them.
 
-The TAG-DEV activities continued throughout the month.
+The TAG-DEV programme continued through the month:
 
-- **October 8** – TAG-DEV workshop
-- **October 9** – TAG-DEV bootcamp for the Agri-Innovation Challenge
-- **October 10** – another workshop focused on **pitching and intellectual property rights**
+- **October 8** — TAG-DEV workshop
+- **October 9** — TAG-DEV bootcamp for the Agri-Innovation Challenge
 
-That last session was particularly interesting. **ZimTrade** and **Munyaradzi Shadhaya** were guest speakers, and the discussions around commercialization and protecting innovation added a perspective I hadn’t thought about deeply before.
+![TAG-DEV Bootcamp](https://placehold.co/600x400/f2f2f7/1c1c1e?text=TAG-DEV+Bootcamp)
+![Bootcamp Session](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Bootcamp+Session)
 
-Later in October, Africa University’s **board members visited campus**, and we were asked to **exhibit AgriLease to them**. It was another moment where the project moved beyond classrooms and into real institutional conversations.
+- **October 10** — Another workshop, this one focused on **pitching and IP rights**
+
+This session stood out. **ZimTrade** and **Munyaradzi Shadhaya** came in as guest speakers, and the conversation around commercialisation, market entry, and protecting innovation was exactly the kind of perspective I didn't know I was missing.
+
+Later in the month, Africa University's **board members visited campus**. We were asked to **exhibit AgriLease** to them — yet another reminder that this project was no longer just a student experiment. It was being taken seriously by people with institutional weight, and that came with its own kind of pressure.
 
 ---
 
-## November: Winning the Challenge
+## November 5th: We Wiped the Floor
 
-By the time **November 5th** arrived, the TAG-DEV pitch competition had become the main focus.
+The TAG-DEV pitch competition arrived.
 
 We presented **AgriLease**.
 
-And we won.
+And we won — **first place**, and **$5,000 in funding** for the project.
 
-First place.
+It was one of those moments where months of quiet, unglamorous work suddenly become visible. All the workshops, the feedback sessions, the late nights thinking about the problem — it compressed into a single afternoon and paid off.
 
-Along with **$5,000 in funding for the project**.
+But the celebration was short-lived.
 
-It was one of those moments where months of quiet work suddenly become visible.
-
-But the celebration didn’t last long.
-
-Because right after that, reality returned.
+Because right after that, the rest of November came crashing back in.
 
 ---
 
 ## The Smart Student Identification System
 
-While everything with TAG-DEV was happening, I was also leading a **group project for school**.
+While TAG-DEV was unfolding, I was simultaneously leading a **group project for school**.
 
-We were building a **Smart Student Identification System** where students scan their **student ID QR code** and then verify their identity using **facial recognition**.
+We were building a **Smart Student Identification System**: students scan their student ID QR code, then verify their identity through **facial recognition** before access is granted. I was the lead developer.
 
-I was the lead developer.
+The biggest technical challenge of the whole project turned out to be the facial recognition implementation.
 
-The biggest challenge turned out to be implementing facial recognition inside **React Native with Expo**.
+My first attempt was **TensorFlow**. It refused. The version conflicts between TensorFlow, React Native, and our Expo setup made it practically impossible to get running in time.
 
-My first attempt was using **TensorFlow**, but it simply refused to cooperate with the versions of React Native and Expo we were using. After a lot of frustration and experimentation, I eventually switched to **Face++ API**.
+So I pivoted.
 
-And it worked like magic.
+I found **Face++ API**, integrated it, and —
 
-Once that hurdle was solved, the rest of the system came together quickly.
+It worked like magic.
 
-We presented the project on **November 14th**.
+Once that piece clicked into place, the rest of the system came together. The QR scanning, the verification flow, the access control logic — all of it started working the way it was supposed to.
 
-<!-- Smart Student Identification System photos here -->
+We presented on **November 14th**.
 
-Shortly after that, **exams began**, marking the end of the semester.
+<!-- YouTube: Smart Student Identification System Demo -->
+
+[![Smart Student ID System Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+
+![Smart Student ID System](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Smart+Student+ID+System)
+![Project Presentation](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Project+Presentation)
+![Team Photo](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Team+Photo)
+
+Then exams began.
+
+And that was that for the semester.
 
 ---
 
-## December: Back Home
+## December: A Different Kind of Rest
 
-After exams, I travelled back home again.
+After exams, I went back home.
 
-This time, instead of building apps every day, I spent some time **helping my mom with her kitchen restaurant**. It was a completely different environment from coding or pitching startups — but it was grounding in its own way.
+This time, instead of building apps around the clock, I spent time **helping my mom with her kitchen restaurant**. No standups. No PRs. No architecture discussions. Just showing up, being useful, and being present.
 
-The year slowly wound down.
+It was grounding in a way that nothing else from the year had been.
 
-Christmas came.
-
-Then a **church crossover service** where we prayed and welcomed the new year.
+Christmas came. Then a **crossover service at church** where we prayed and welcomed what was ahead.
 
 And just like that, 2025 was over.
 
@@ -163,11 +171,9 @@ And just like that, 2025 was over.
 
 ## Closing the Year
 
-Looking back, the last quarter of 2025 wasn’t about speed.
+Looking back, the last quarter wasn't about speed. It was about **responsibility**.
 
-It was about responsibility.
-
-AgriLease moved from an idea to something with real backing and real expectations. School projects demanded leadership and technical problem-solving. Events, workshops, and competitions forced me to think beyond code and into the broader ecosystem around innovation.
+AgriLease moved from an exciting project to something with real backing and real expectations. A school project demanded technical leadership in unfamiliar territory. Competitions, workshops, and institutional exhibits forced me to think beyond code and into the broader ecosystem around innovation.
 
 I ended the year tired — but aligned.
 
@@ -189,4 +195,4 @@ The year began with questions.
 
 It ended with direction.
 
-And I entered **2026** ready for the next chapter — with faith, clarity, and a lot more work ahead.
+And I entered **2026** with faith, clarity, and a lot more work ahead.

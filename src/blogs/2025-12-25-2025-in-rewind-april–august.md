@@ -6,7 +6,7 @@ date: 2025-12-25T10:00:00.000+02:00
 tags:
   - post
   - featured
-image: /assets/blog-images/img-20250125-wa0038~2-1-.jpg
+image: /assets/blog-images/april-aug/main.jpg
 imageAlt: Courtney
 series: 2025-rewind
 ---
@@ -29,7 +29,7 @@ Not because I lost momentum, but because I realized that speed without direction
 
 May kicked off with the long holiday after finishing second year. I was back home — and for the first time in a while, life had some breathing room.
 
-![Mom and I at Parkrun](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Parkrun+with+Mom)
+![Mom and I at Parkrun](/assets/blog-images/april-aug/parkrun.jpg)
 
 I joined **parkrun** with my mom. If you don't know parkrun, it's a free, weekly 5km run that happens every Saturday morning. I went in skeptical. I came out converted. There's something about getting up at 6am, lacing up, and just _running_ — no deadlines, no Slack messages, no PRs to review — that resets you in ways nothing else does. I actually enjoyed running. That surprised me.
 
@@ -57,9 +57,10 @@ By **May 6th**, I had submitted.
 
 It was a React Native frontend running on mock data — no real backend, no database, no payment layer. But it worked. It looked real. And it was _done_.
 
-<!-- YouTube: AgriLease Presidential Awards Frontend Demo -->
-
-[![AgriLease Frontend Demo – Presidential Awards](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
+<div align="center" style="margin: 20px 0;">
+  <iframe class="video-portrait" src="https://www.youtube.com/embed/W5dVdqvQZr8" title="AgriLease Presidential Awards Frontend Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 281px; height: 500px;"></iframe>
+  <p><em>AgriLease Frontend Demo – Presidential Awards</em></p>
+</div>
 
 That sprint taught me something about myself: I operate well under pressure, but I operate _better_ when the pressure has a purpose. This wasn't stress for the sake of stress — this was a deadline that mattered, for something I believed in.
 
@@ -187,9 +188,42 @@ Then I remembered: I had something to show them.
 
 <!-- [photos from the show] -->
 
-![Agri Show Booth](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Agri+Show+Booth)
-![Pitching to Farmers](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Pitching+to+Farmers)
-![Agri Show Team](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Agri+Show+Team)
+<p>Hover or tap on the pictures below to bring a photo to the front.</p>
+<style>
+.photo-stack {
+  position: relative;
+  width: 90%;
+  max-width: 500px;
+  margin: 50px auto 80px auto;
+  min-height: 450px;
+}
+.photo {
+  position: absolute;
+  width: 75%;
+  max-width: 350px;
+  border-radius: 16px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+.photo:hover {
+  transform: scale(1.1) rotate(0deg);
+  z-index: 10;
+}
+.rotate1 { transform: rotate(-10deg); top: 0; left: 0; z-index: 1; }
+.rotate2 { transform: rotate(0deg); top: 60px; left: 15%; z-index: 2; }
+.rotate3 { transform: rotate(10deg); top: 120px; left: 30%; z-index: 3; }
+@media (max-width: 600px) {
+  .photo-stack {
+    min-height: 350px;
+  }
+}
+</style>
+
+<div class="photo-stack">
+  <img src="/assets/blog-images/april-aug/booth.jpg" alt="Agri Show Booth" class="photo rotate1" />
+  <img src="/assets/blog-images/april-aug/Courtney.JPG" alt="Pitching to Farmers" class="photo rotate2" />
+  <img src="/assets/blog-images/april-aug/agrishowteam.jpg" alt="Agri Show Team" class="photo rotate3" />
+</div>
 
 The app was running. Fully functional — bookings, listings, profiles, GPS integration, the whole flow. The only thing missing was the payment gateway. But that's fine. Farmers don't care about payment architecture on first contact. They care about whether the thing makes sense.
 

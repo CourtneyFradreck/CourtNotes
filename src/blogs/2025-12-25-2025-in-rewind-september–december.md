@@ -6,8 +6,8 @@ date: 2025-12-25T15:00:00.000+02:00
 tags:
   - post
   - featured
-image: /assets/blog-images/img-20250125-wa0038~2-1-.jpg
-imageAlt: Courtney
+image: /assets/blog-images/sept-dec/tag-dev/team-photo.jpg
+imageAlt: Winning First Place at TAG-DEV Agri-Innovation Challenge
 series: 2025-rewind
 ---
 
@@ -46,8 +46,10 @@ But slowing down wasn't failure. It was adjustment.
 
 The month opened with the **Manicaland Agricultural Show** on **September 19th and 20th**. After Harare, this felt familiar but no less meaningful — another chance to put AgriLease in front of people who would actually use it, to listen, and to keep refining our understanding of the problem.
 
-![Manicaland Agri Show](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Manicaland+Agricultural+Show)
-![At the Booth](https://placehold.co/600x400/f2f2f7/1c1c1e?text=At+the+Booth)
+<div class="image-grid">
+  <img src="/assets/blog-images/sept-dec/manicaland-show/courtney-interacts-at-show.jpg" alt="Manicaland Agri Show">
+  <img src="/assets/blog-images/sept-dec/manicaland-show/booth.jpg" alt="At the Booth">
+</div>
 
 Then on **September 21st**, it was my mom's birthday.
 
@@ -83,9 +85,11 @@ The very next day, **October 2nd**, we were on the road to Harare for an educati
 - **ZINGSA** (Zimbabwe National Geospatial and Space Agency)
 - **ZCHPC** (Zimbabwe Centre for High Performance Computing)
 
-![UZ ZPH Educational Trip](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Educational+Trip+to+Harare)
-![ZINGSA Visit](https://placehold.co/600x400/f2f2f7/1c1c1e?text=ZINGSA+Visit)
-![ZCHPC Visit](https://placehold.co/600x400/f2f2f7/1c1c1e?text=ZCHPC+Visit)
+<div class="image-grid">
+  <img src="/assets/blog-images/sept-dec/harare-trip/IMG-20251004-WA0019.jpg" alt="UZ ZPH Educational Trip" class="portrait">
+  <img src="/assets/blog-images/sept-dec/harare-trip/IMG-20251009-WA0189.jpg" alt="ZINGSA Visit" class="portrait">
+  <img src="/assets/blog-images/sept-dec/harare-trip/IMG-20251009-WA0210.jpg" alt="ZCHPC Visit" class="portrait">
+</div>
 
 Seeing research infrastructure and computing environments that most students only read about in textbooks — it opened something up. It's one thing to know these institutions exist. It's another to walk through them.
 
@@ -94,14 +98,22 @@ The TAG-DEV programme continued through the month:
 - **October 8** — TAG-DEV workshop
 - **October 9** — TAG-DEV bootcamp for the Agri-Innovation Challenge
 
-![TAG-DEV Bootcamp](https://placehold.co/600x400/f2f2f7/1c1c1e?text=TAG-DEV+Bootcamp)
-![Bootcamp Session](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Bootcamp+Session)
+<div class="image-grid">
+  <img src="/assets/blog-images/sept-dec/tag-dev/pitching.jpg" alt="TAG-DEV Bootcamp">
+  <img src="/assets/blog-images/sept-dec/tag-dev/pitching2.jpg" alt="Bootcamp Session">
+</div>
 
 - **October 10** — Another workshop, this one focused on **pitching and IP rights**
 
 This session stood out. **ZimTrade** and **Munyaradzi Shadhaya** came in as guest speakers, and the conversation around commercialisation, market entry, and protecting innovation was exactly the kind of perspective I didn't know I was missing.
 
 Later in the month, Africa University's **board members visited campus**. We were asked to **exhibit AgriLease** to them — yet another reminder that this project was no longer just a student experiment. It was being taken seriously by people with institutional weight, and that came with its own kind of pressure.
+
+<div class="image-grid">
+  <img src="/assets/blog-images/sept-dec/board-exhibit/IMG-20251028-WA0070.jpg" alt="Exhibiting AgriLease to AU Board">
+  <img src="/assets/blog-images/sept-dec/board-exhibit/IMG-20251028-WA0072.jpg" alt="Board Members Interaction">
+  <img src="/assets/blog-images/sept-dec/board-exhibit/IMG-20251028-WA0096.jpg" alt="Explaining the Vision">
+</div>
 
 ---
 
@@ -114,6 +126,12 @@ We presented **AgriLease**.
 And we won — **first place**, and **$5,000 in funding** for the project.
 
 It was one of those moments where months of quiet, unglamorous work suddenly become visible. All the workshops, the feedback sessions, the late nights thinking about the problem — it compressed into a single afternoon and paid off.
+
+<div class="image-grid">
+  <img src="/assets/blog-images/sept-dec/tag-dev/handshack.jpg" alt="Winning Moment">
+  <img src="/assets/blog-images/sept-dec/tag-dev/certificate.jpg" alt="The Certificate">
+  <img src="/assets/blog-images/sept-dec/tag-dev/team-photo.jpg" alt="The Whole Team">
+</div>
 
 But the celebration was short-lived.
 
@@ -145,9 +163,11 @@ We presented on **November 14th**.
 
 [![Smart Student ID System Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
 
-![Smart Student ID System](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Smart+Student+ID+System)
-![Project Presentation](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Project+Presentation)
-![Team Photo](https://placehold.co/600x400/f2f2f7/1c1c1e?text=Team+Photo)
+<div class="image-grid">
+  <img src="https://placehold.co/600x400/f2f2f7/1c1c1e?text=Smart+Student+ID+System" alt="Smart Student ID System">
+  <img src="https://placehold.co/600x400/f2f2f7/1c1c1e?text=Project+Presentation" alt="Project Presentation">
+  <img src="https://placehold.co/600x400/f2f2f7/1c1c1e?text=Team+Photo" alt="Team Photo">
+</div>
 
 Then exams began.
 

@@ -100,7 +100,10 @@ campus leadership, technical coursework, volunteer work, and more.
 By the end, AttachCV has enough context to help you build a compelling CV
 even if you've never held a formal job.
 
-[Insert screenshot of onboarding interview here]
+<figure class="main-article__figure">
+  <img src="../assets/blog-images/attachcv/discover-experience.png" alt="AttachCV onboarding interview for discovering student experience" loading="lazy" decoding="async">
+  <figcaption>Experience Discovery onboarding interview</figcaption>
+</figure>
 
 ### 2. ATS-Friendly CV Builder
 
@@ -110,7 +113,10 @@ and present your information clearly to recruiters.
 Every template is single-column, keyword-friendly, and formatted for parsing
 — the opposite of the Canva trap.
 
-[Insert screenshot of CV builder here]
+<figure class="main-article__figure">
+  <img src="../assets/blog-images/attachcv/cv-builder.png" alt="AttachCV ATS-friendly CV builder interface" loading="lazy" decoding="async">
+  <figcaption>ATS-friendly CV builder</figcaption>
+</figure>
 
 ### 3. CV Upload and Conversion
 
@@ -119,14 +125,15 @@ ATS-optimized format without you having to rebuild it from scratch.
 
 Supports both PDF and Word documents.
 
-[Insert screenshot of upload and conversion feature here]
+<figure class="main-article__figure">
+  <img src="../assets/blog-images/attachcv/upload-and-conversion.png" alt="AttachCV CV upload and conversion feature" loading="lazy" decoding="async">
+  <figcaption>CV upload and conversion</figcaption>
+</figure>
 
 ### 4. Manual CV Editing
 
 Full control over every section of your CV through a structured editor. Edit,
 rearrange, and refine your content at any point in the process.
-
-[Insert screenshot of editor here]
 
 ### 5. ATS Score and Full Diagnostic
 
@@ -143,7 +150,10 @@ Get instant feedback on how your CV performs against ATS systems.
 
 This turns a vague rejection into actionable insight.
 
-[Insert screenshot of ATS score and diagnostic here]
+<figure class="main-article__figure">
+  <img src="../assets/blog-images/attachcv/ats-score.png" alt="AttachCV ATS score dashboard with diagnostic feedback" loading="lazy" decoding="async">
+  <figcaption>ATS score and diagnostics</figcaption>
+</figure>
 
 ### 6. AI Bullet-Point Optimizer
 
@@ -155,8 +165,6 @@ The bullet optimizer takes your existing points and rewrites them using strong
 action verbs, quantifiable outcomes, and professional framing — turning
 passive descriptions into evidence of real capability.
 
-[Insert screenshot of bullet optimizer here]
-
 ### 7. AI Profile Summary Generator
 
 Your profile summary is the first thing a recruiter reads. It needs to be
@@ -166,7 +174,10 @@ AttachCV generates a personalized profile summary based on your actual
 experience, skills, and target role, giving you a strong opening that sets
 the right tone for the rest of your CV.
 
-[Insert screenshot of profile summary generator here]
+<figure class="main-article__figure">
+  <img src="../assets/blog-images/attachcv/summary.png" alt="AttachCV AI-generated profile summary section" loading="lazy" decoding="async">
+  <figcaption>AI profile summary generator</figcaption>
+</figure>
 
 ### 8. Matchmaker — Job Description Tailoring
 
@@ -183,7 +194,10 @@ Matchmaker lets you paste in a job description and instantly:
 Instead of sending the same CV everywhere, you submit one that speaks
 directly to each opportunity.
 
-[Insert screenshot of Matchmaker feature here]
+<figure class="main-article__figure">
+  <img src="../assets/blog-images/attachcv/tailor-cv.png" alt="AttachCV Matchmaker job description tailoring feature" loading="lazy" decoding="async">
+  <figcaption>Matchmaker job tailoring</figcaption>
+</figure>
 
 ### 9. CV Export
 
@@ -193,8 +207,6 @@ every time.
 Free tier users pay a flat $1.50 per export. Premium users download
 without limits for the duration of their plan.
 
-[Insert screenshot of export/download here]
-
 ### 10. Multiple CV Versions
 
 Different roles call for different CVs. Premium users can save and manage
@@ -202,7 +214,10 @@ multiple CV versions within the platform — one tailored for software roles,
 another for IT support, another for research positions — without losing
 previous work.
 
-[Insert screenshot of saved CVs here]
+<figure class="main-article__figure">
+  <img src="../assets/blog-images/attachcv/layout.png" alt="AttachCV multiple CV layout versions" loading="lazy" decoding="async">
+  <figcaption>Multiple CV versions management</figcaption>
+</figure>
 
 ### 11. Localized Payments
 
@@ -288,5 +303,5 @@ AttachCV helps you make it count.
 
 ---
 
-*In the next post: **How AttachCV Works — A Step-by-Step Walkthrough.***
-*From uploading your CV to walking out interview-ready.*
+\*In the next post: **How AttachCV Works — A Step-by-Step Walkthrough.\***
+_From uploading your CV to walking out interview-ready._

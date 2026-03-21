@@ -150,7 +150,7 @@ Get instant feedback on how your CV performs against ATS systems.
 
 This turns a vague rejection into actionable insight.
 
-<figure class="main-article__figure">
+<figure class="main-article__figure main-article__figure--portrait">
   <img src="../assets/blog-images/attachcv/ats-score.png" alt="AttachCV ATS score dashboard with diagnostic feedback" loading="lazy" decoding="async">
   <figcaption>ATS score and diagnostics</figcaption>
 </figure>

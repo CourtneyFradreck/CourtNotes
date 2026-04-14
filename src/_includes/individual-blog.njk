@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include "seo.njk" %}
     <link rel="shortcut icon" href="../assets/logo.svg" type="image/x-icon">
-    <title>{{ title }}</title>
     <link rel="stylesheet" href="/individual.css">
+    <link rel="alternate" type="application/rss+xml" title="{{ metadata.title }} RSS Feed" href="{{ '/feed.xml' | absoluteUrl(metadata.siteUrl) }}">
 </head>
 <body>
     {% include 'header.njk' %}
@@ -15,7 +15,7 @@
             <div class="container container--narrow flow">
               <h1 class="article-title">{{ title }}</h1>
                 <figure class="main-article__figure">
-                    <img src="{{ image }}" alt="{{ imageAlt }}">
+                    <img src="{{ image }}" alt="{{ imageAlt }}" width="800" height="450" loading="eager">
                     <figcaption>{{ imageAlt }}</figcaption>
                 </figure>
 

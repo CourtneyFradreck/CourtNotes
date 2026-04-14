@@ -10,18 +10,20 @@
 {% set imageAlt = imageAlt or "CourtNotes site logo" %}
 {% set absolutePageUrl = page.url | absoluteUrl(metadata.siteUrl) %}
 {% set fullImage %}{% if image and image.indexOf('http') == 0 %}{{ image }}{% else %}{{ image | absoluteUrl(metadata.siteUrl) }}{% endif %}{% endset %}
-
-
-
+{% set isPost = tags and tags.indexOf('post') > -1 %}
 
 {# Meta tags for SEO #}
 <title>{{ seoTitle }}</title>
 <meta name="description" content="{{ description }}">
 <meta name="author" content="{{ author }}">
 <meta name="keywords" content="courtney fradreck, notes, personal, blog, courtney fradreck's blog, reflections, software engineering, learning, tech, growth">
+<meta name="robots" content="index, follow">
 
 {# Canonical link #}
 <link rel="canonical" href="{{ absolutePageUrl }}">
+
+{# RSS feed discovery #}
+<link rel="alternate" type="application/rss+xml" title="{{ metadata.title }} RSS Feed" href="{{ '/feed.xml' | absoluteUrl(metadata.siteUrl) }}">
 
 <!-- Theme Colors for Light and Dark -->
 <meta name="theme-color" content="#f2f2f7" media="(prefers-color-scheme: light)">
@@ -30,11 +32,15 @@
 {# Open Graph for social previews #}
 <meta property="og:title" content="{{ seoTitle }}">
 <meta property="og:description" content="{{ description }}">
-<meta property="og:type" content="article">
+<meta property="og:type" content="{% if isPost %}article{% else %}website{% endif %}">
 <meta property="og:url" content="{{ absolutePageUrl }}">
 <meta property="og:image" content="{{ fullImage }}">
 <meta property="og:image:alt" content="{{ imageAlt }}">
 <meta property="og:site_name" content="CourtNotes by {{ author }}">
+{% if isPost %}
+<meta property="article:author" content="{{ author }}">
+<meta property="article:published_time" content="{{ date.toISOString() if date }}">
+{% endif %}
 
 {# Twitter card #}
 <meta name="twitter:card" content="summary_large_image">
@@ -45,47 +51,61 @@
 <meta name="twitter:creator" content="@CourtneyFraddy">
 <meta name="twitter:site" content="@CourtneyFraddy">
 
-
-
-<!-- Schema.org JSON-LD -->
+{# Schema.org JSON-LD — conditional by page type #}
+{% if isPost %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Blog",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ absolutePageUrl }}"
+  },
+  "headline": "{{ title }}",
+  "description": "{{ description }}",
+  "image": ["{{ fullImage }}"],
+  "author": {
+    "@type": "Person",
+    "name": "{{ author }}"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ metadata.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ '/assets/logo.svg' | absoluteUrl(metadata.siteUrl) }}"
+    }
+  },
+  "datePublished": "{{ date.toISOString() if date else '2024-01-01' }}",
+  "dateModified": "{{ date.toISOString() if date else '2024-01-01' }}"
+}
+</script>
+{% elif title == "Home" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "{{ metadata.title }}",
+  "url": "{{ metadata.siteUrl }}",
+  "description": "{{ description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ metadata.author }}"
+  }
+}
+</script>
+{% else %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
   "name": "{{ seoTitle }}",
   "url": "{{ absolutePageUrl }}",
   "description": "{{ description }}",
   "author": {
     "@type": "Person",
-    "name": "{{ author }}"
+    "name": "{{ metadata.author }}"
   }
 }
 </script>
-<script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "{{ absolutePageUrl }}"
-      },
-      "headline": "{{ seoTitle | safe }}",
-      "description": "{{ description | safe }}",
-      "image": ["{{ fullImage }}"],
-      "author": {
-        "@type": "Person",
-        "name": "{{ author or metadata.author }}"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "{{ seoTitle }}",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "{{ '/assets/logo.svg' | absoluteUrl(metadata.siteUrl) }}"
-        }
-      },
-      "datePublished": "{{ date or '2024-01-01' }}",
-      "dateModified": "{{ date or '2024-01-01' }}"
-    }
-    </script>
-    
+{% endif %}

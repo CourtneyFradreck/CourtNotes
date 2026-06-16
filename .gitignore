@@ -15,3 +15,6 @@ about.md
 .claude
 GEMINI.md
 AGENTS.md
+
+.env*
+*.p8

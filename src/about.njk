@@ -64,32 +64,22 @@ permalink: /about/
     </div>
 
     <div class="about-apple-music" data-source="apple-music">
-        <h2>Currently Playing on Apple Music</h2>
-        <p class="apple-music-note">
-            This section will display live heavy rotation and recently played tracks once the Apple Music API token is configured.
-            For now, enjoy the placeholders that mirror how the widget will render.
-        </p>
+        <h2>Recently Played on Apple Music</h2>
+        {% if music.length %}
         <div class="apple-music-grid">
-            <article class="apple-music-card" data-slot="heavy-rotation">
-                <h3>Heavy Rotation</h3>
-                <ul>
-                    <li><strong>Placeholder Playlist:</strong> Late Night Shipping</li>
-                    <li>Kendrick Lamar - "Count Me Out"</li>
-                    <li>J. Cole - "7 Minute Drill"</li>
-                    <li>Sjava - "Isoka"</li>
-                    <li>Nasty C - "Crazy Crazy"</li>
-                </ul>
-            </article>
-            <article class="apple-music-card" data-slot="recently-played">
-                <h3>Recently Played</h3>
-                <ol>
-                    <li>A-Reece - "The 5 Year Plan"</li>
-                    <li>Elaine - "Shine"</li>
-                    <li>Black Coffee - "Wish You Were Here"</li>
-                </ol>
-                <p class="apple-music-meta">Updated every time a new play event is synced.</p>
-            </article>
+            {% for track in music %}
+            <a class="apple-music-card" href="{{ track.url }}" target="_blank" rel="noopener">
+                <img src="{{ track.artwork }}" width="300" height="300" loading="lazy" alt="Album artwork for {{ track.name }}">
+                <h3>{{ track.name }}</h3>
+                <p>{{ track.artist }}</p>
+            </a>
+            {% endfor %}
         </div>
+        {% else %}
+        <p class="apple-music-note">
+            Nothing to show right now — recently played tracks appear here once the Apple Music token is configured and the next build runs.
+        </p>
+        {% endif %}
     </div>
 
     <div class="about-cta">

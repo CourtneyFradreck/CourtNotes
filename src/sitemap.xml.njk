@@ -8,8 +8,16 @@ eleventyExcludeFromCollections: true
     {% if page.url and page.url != "/404.html" %}
     <url>
       <loc>{{ metadata.siteUrl | default("https://courtnotes.netlify.app") }}{{ page.url }}</loc>
-      {# Ensure the date is formatted as YYYY-MM-DD #}
       <lastmod>{{ page.date.toISOString().split('T')[0] if page.date else "2024-01-01" }}</lastmod>
+      {% if page.url == "/about/" %}
+      <priority>1.0</priority>
+      {% elif page.url == "/" %}
+      <priority>0.9</priority>
+      {% elif page.url == "/blog/" %}
+      <priority>0.8</priority>
+      {% else %}
+      <priority>0.6</priority>
+      {% endif %}
     </url>
     {% endif %}
   {% endfor %}

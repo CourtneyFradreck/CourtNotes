@@ -1,6 +1,7 @@
 ---
 title : Home
 layout: 'base.njk'
+description: "CourtNotes — a personal blog by Courtney Fradreck covering software engineering, startup building, and learning in public from Zimbabwe."
 ---
 
    
@@ -85,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button onclick="window.location.href='{{ post.url }}'">Continue Reading</button>
                 </div>
                 <div class="featured-article-img">
-                    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="400">
+                    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="400" height="225" loading="lazy">
                 </div> 
             </div>
             {%- endfor -%}

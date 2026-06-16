@@ -1,0 +1,21 @@
+---
+permalink: "llms.txt"
+eleventyExcludeFromCollections: true
+---
+# {{ site.title }}
+
+> {{ site.description }}
+
+CourtNotes is a personal blog by {{ site.author }}, a Zimbabwe-based software engineering student, startup builder, and tech community lead. The site captures the journey of learning in public — from experiments in Eleventy to reflections on leadership, startup execution, and Africa-focused technology.
+
+Courtney is the CEO and project lead at Proxyon Technologies, building AgriLease — a mobile-first marketplace helping farmers discover, book, and pay for agricultural equipment. He also serves as Tech Lead for GDG on Campus at his university.
+
+## Pages
+
+- [About]({{ site.siteUrl }}/about/): Get to know Courtney Fradreck — the person behind CourtNotes.
+- [Blog]({{ site.siteUrl }}/blog/): All blog posts and articles.
+
+## Blog Posts
+{% for post in collections.post | reverse %}
+- [{{ post.data.title }}]({{ site.siteUrl }}{{ post.url }}): {{ post.data.description }}
+{%- endfor %}

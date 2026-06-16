@@ -16,6 +16,14 @@ const RECENT_TRACKS_URL =
   "https://api.music.apple.com/v1/me/recent/played/tracks?limit=5";
 
 export default async function () {
+  // Local dev convenience: load .env so `npm run start` / `npm run build` can
+  // populate these vars. Guarded with try/catch — on Netlify the env is already
+  // set (and dotenv is a devDependency that may be pruned), so a missing dotenv
+  // here must never break the build.
+  try {
+    await import("dotenv/config");
+  } catch {}
+
   const {
     APPLE_AUTHKEY_BASE64,
     APPLE_TEAM_ID,

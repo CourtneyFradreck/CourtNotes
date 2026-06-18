@@ -461,73 +461,111 @@ footer {
   margin-bottom: 1.5rem;
 }
 
-.apple-music-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
+/* Playlists (recently played + Heavy Rotation) render as track lists */
+.apple-music-playlist {
+  margin-top: 2.5rem;
 }
 
-.apple-music-card {
-  background-color: var(--tertiary-color);
-  border: 1px solid var(--border-color);
-  border-radius: 14px;
-  padding: 1.5rem;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+.apple-music-playlist:first-of-type {
+  margin-top: 0;
 }
 
-.apple-music-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
+.apple-music-playlist-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.apple-music-card h3 {
-  margin-bottom: 0.75rem;
+.apple-music-playlist-head h3 {
+  margin: 0;
 }
 
-.apple-music-card ul,
-.apple-music-card ol {
-  margin-left: 1.25rem;
-  color: var(--text-secondary);
-  line-height: 1.7;
-}
-
-.apple-music-card li strong {
-  color: var(--text-primary);
-}
-
-.apple-music-meta {
-  margin-top: 1rem;
-  color: var(--text-secondary);
-  font-size: 0.85rem;
-}
-
-/* Album-art cards (recently played tracks link out to Apple Music) */
-a.apple-music-card {
-  display: block;
-  padding: 0;
-  overflow: hidden;
-  text-decoration: none;
-  color: inherit;
-}
-
-.apple-music-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-}
-
-a.apple-music-card h3 {
-  margin: 1rem 1rem 0.25rem;
-  font-size: 1rem;
-}
-
-a.apple-music-card p {
-  margin: 0 1rem 1.25rem;
+.apple-music-playlist-head p {
+  margin: 0.2rem 0 0;
   color: var(--text-secondary);
   font-size: 0.9rem;
+}
+
+.apple-music-playlist-head p a {
+  color: var(--text-primary);
+  text-decoration: underline;
+  white-space: nowrap;
+}
+
+.apple-music-playlist-head p a:hover {
+  color: var(--accent-yellow-hover);
+}
+
+.apple-music-playlist-cover {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.apple-music-tracklist {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: track;
+}
+
+.apple-music-track {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.5rem 0.6rem;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: background-color 0.2s ease;
+}
+
+.apple-music-track::before {
+  counter-increment: track;
+  content: counter(track);
+  min-width: 1.25rem;
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-variant-numeric: tabular-nums;
+  flex-shrink: 0;
+}
+
+.apple-music-track:hover {
+  background-color: var(--tertiary-color);
+}
+
+.apple-music-track img {
+  width: 56px;
+  height: 56px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.apple-music-track-info {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.apple-music-track-name {
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.apple-music-track-artist {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Responsive */
@@ -591,7 +629,7 @@ a.apple-music-card p {
     padding: 1rem;
   }
 
-  .apple-music-grid {
-    grid-template-columns: 1fr;
+  .apple-music-playlist-head {
+    align-items: flex-start;
   }
 }

@@ -64,21 +64,62 @@ permalink: /about/
     </div>
 
     <div class="about-apple-music" data-source="apple-music">
-        <h2>Recently Played on Apple Music</h2>
-        {% if music.length %}
-        <div class="apple-music-grid">
-            {% for track in music %}
-            <a class="apple-music-card" href="{{ track.url }}" target="_blank" rel="noopener">
-                <img src="{{ track.artwork }}" width="300" height="300" loading="lazy" alt="Album artwork for {{ track.name }}">
-                <h3>{{ track.name }}</h3>
-                <p>{{ track.artist }}</p>
-            </a>
-            {% endfor %}
+        <h2>On Apple Music</h2>
+
+        <div class="apple-music-playlist">
+            <div class="apple-music-playlist-head">
+                <h3>Recently Played</h3>
+                <p>The last few tracks I've had on.</p>
+            </div>
+            {% if music.recent.length %}
+            <ol class="apple-music-tracklist">
+                {% for track in music.recent %}
+                <li>
+                    <a class="apple-music-track" href="{{ track.url }}" target="_blank" rel="noopener">
+                        <img src="{{ track.artwork }}" width="56" height="56" loading="lazy" alt="Album artwork for {{ track.name }}">
+                        <span class="apple-music-track-info">
+                            <span class="apple-music-track-name">{{ track.name }}</span>
+                            <span class="apple-music-track-artist">{{ track.artist }}</span>
+                        </span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <p class="apple-music-note">
+                Nothing to show right now — recently played tracks appear here once the Apple Music token is configured and the next build runs.
+            </p>
+            {% endif %}
         </div>
-        {% else %}
-        <p class="apple-music-note">
-            Nothing to show right now — recently played tracks appear here once the Apple Music token is configured and the next build runs.
-        </p>
+
+        {% if music.heavyRotation %}
+        <div class="apple-music-playlist">
+            <div class="apple-music-playlist-head">
+                {% if music.heavyRotation.artwork %}
+                <img class="apple-music-playlist-cover" src="{{ music.heavyRotation.artwork }}" width="64" height="64" loading="lazy" alt="{{ music.heavyRotation.name }} playlist cover">
+                {% endif %}
+                <div>
+                    <h3>{{ music.heavyRotation.name }}</h3>
+                    <p>
+                        My on-repeat playlist, auto-built by Apple Music.
+                        {% if music.heavyRotation.url %}<a href="{{ music.heavyRotation.url }}" target="_blank" rel="noopener">Open in Apple Music →</a>{% endif %}
+                    </p>
+                </div>
+            </div>
+            <ol class="apple-music-tracklist">
+                {% for track in music.heavyRotation.tracks %}
+                <li>
+                    <a class="apple-music-track" href="{{ track.url }}" target="_blank" rel="noopener">
+                        <img src="{{ track.artwork }}" width="56" height="56" loading="lazy" alt="Album artwork for {{ track.name }}">
+                        <span class="apple-music-track-info">
+                            <span class="apple-music-track-name">{{ track.name }}</span>
+                            <span class="apple-music-track-artist">{{ track.artist }}</span>
+                        </span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
         {% endif %}
     </div>
 

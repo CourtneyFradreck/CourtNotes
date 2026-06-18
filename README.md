@@ -9,7 +9,7 @@ Welcome to my personal blogging website! Here, I share my thoughts, ideas, and e
 - 📝 **Netlify CMS** for easy content management
 - 🎨 Minimal and responsive design
 - ⚡ Fast and optimized for performance
-- 🎵 Apple Music "recently played" widget on the About page (build-time, no client-side tokens)
+- 🎵 Apple Music playlists on the About page — recently played + the auto-generated "Heavy Rotation" (build-time, no client-side tokens)
 
 ## Getting Started
 
@@ -83,16 +83,16 @@ courtnotes/
 - Add new Markdown files in `src/blogs/` to create new posts.
 - Customize styles in `src/style.css` to match your preferred design.
 
-## 🎵 Apple Music "Recently Played" Widget
+## 🎵 Apple Music Playlists
 
-The About page (`/about/`) shows my most recent Apple Music plays. It's fetched **at build time** — there are no tokens in the browser, and a missing/expired token or any API failure **never breaks the build** (the data file just returns an empty list and the section renders a fallback message).
+The About page (`/about/`) shows two Apple Music playlists: my **recently played** tracks and my **Heavy Rotation** playlist (an auto-generated personalized playlist that Apple Music maintains). Both are fetched **at build time** — there are no tokens in the browser, and a missing/expired token or any API failure **never breaks the build** (the data file returns empty data and each section renders a fallback or is omitted).
 
 ### How it works
 
 | Piece | File | Role |
 |-------|------|------|
-| Build-time data | `src/_data/music.mjs` | Mints a fresh developer JWT from the base64'd `.p8`, calls the Apple Music API, returns up to 5 tracks (or `[]` on any failure). |
-| Widget markup | `src/about.njk` | Loops `music` into `.apple-music-card` links; shows a fallback note when empty. |
+| Build-time data | `src/_data/music.mjs` | Mints a fresh developer JWT from the base64'd `.p8`, then fetches recently played tracks and the Heavy Rotation playlist. Heavy Rotation isn't a library playlist, so it's discovered from `/me/recommendations` (resilient to Apple rotating the playlist id) and its tracks pulled from the catalog. Returns `{ recent, heavyRotation }`; any failure path degrades to empty data and the function never throws. |
+| Widget markup | `src/about.njk` | Renders `music.recent` and `music.heavyRotation.tracks` as `.apple-music-tracklist` playlists; shows a fallback note when recent is empty and omits Heavy Rotation when unavailable. |
 | Dev-token helper | `scripts/generate-dev-token.mjs` | One-time local: prints a signed developer token. |
 | Authorize page | `scripts/authorize.html` | One-time local: sign in once to obtain the long-lived **Music User Token**. |
 | Auto-refresh | `netlify/functions/refresh-music.mjs` | Scheduled function (`0 */6 * * *`) that POSTs a Netlify build hook every 6 hours so the data stays current. |
@@ -154,7 +154,7 @@ The **Music User Token expires roughly every 6 months** — when the widget goes
 > **Secrets scanning:** if a Netlify deploy fails on secrets scanning, add
 > `SECRETS_SCAN_OMIT_KEYS = APPLE_AUTHKEY_BASE64,APPLE_MUSIC_USER_TOKEN`.
 
-> **Note:** with no Apple env vars set (e.g. local dev), `src/_data/music.mjs` returns `[]`, so `npm run build` succeeds and the About page renders its fallback message instead of tracks.
+> **Note:** with no Apple env vars set (e.g. local dev), `src/_data/music.mjs` returns empty data (`{ recent: [], heavyRotation: null }`), so `npm run build` succeeds and the About page renders its fallback message instead of tracks.
 
 ## Roadmap
 

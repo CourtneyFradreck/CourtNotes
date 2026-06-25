@@ -19,7 +19,7 @@ You apply. You meet the requirements. You've done the coursework. You've worked 
 
 Yet somehow, you never hear back.
 
-That is the problem AttachCV was built to solve.
+That is the problem <a class="link" href="https://attachcv.co.zw" target="_blank" rel="noopener noreferrer">AttachCV</a> was built to solve.
 
 ## What is AttachCV?
 
@@ -300,6 +300,8 @@ uncertain applicants into confident, interview-ready candidates.
 If you are preparing for attachment, your CV is your first opportunity.
 
 AttachCV helps you make it count.
+
+<a class="link" href="https://attachcv.co.zw" target="_blank" rel="noopener noreferrer">**Try AttachCV today → attachcv.co.zw**</a>
 
 ---
 

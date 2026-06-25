@@ -7,16 +7,33 @@ permalink: /about/
 
 <section class="about-hero">
     <div class="about-hero-text">
-        <h2>Hey, I'm Courtney Fradreck</h2>
+        <h2>Hey, I'm Courtney</h2>
         <p>
-            I'm a Zimbabwe-based software engineering student, startup builder, and tech community lead who treats
-            CourtNotes as my public notebook. This space captures the messy-but-fun journey of learning in public,
-            from experiments in Eleventy to reflections on leadership.
+            I'm a software engineering student from Zimbabwe, builder of things, and occasional writer.
         </p>
         <p>
-            By day I'm the CEO and project lead at Proxyon Technologies where we're building AgriLease - a mobile-first
-            marketplace that helps farmers discover, book, and pay for agricultural equipment with trustworthy local
-            logistics and flexible payments. This page is where I connect the dots between that work and the person behind it.
+            I created CourtNotes as a place to collect thoughts that would otherwise stay stuck in my
+            head. Sometimes that's a lesson from a project. Sometimes it's an opinion on a piece of
+            technology. Sometimes it's just me trying to make sense of something by writing about it.
+        </p>
+        <p>
+            I won't pretend this blog has a strict publishing schedule.
+        </p>
+        <p>
+            There are weeks when I'll publish several posts, and there are months when I'll disappear
+            completely because university, startups, work, or life got in the way. That's just how it is.
+        </p>
+        <p>
+            CourtNotes exists because I like documenting things. Whether I actually get around to
+            publishing them is a different story.
+        </p>
+        <p>
+            If you're here for polished tutorials and perfectly planned content calendars, you're
+            probably in the wrong place.
+        </p>
+        <p>
+            If you're interested in software engineering, startups, leadership, building products in
+            Africa, and the occasional tangent that somehow escaped my notes app, welcome.
         </p>
     </div>
     <div class="about-hero-img">
@@ -26,71 +43,133 @@ permalink: /about/
 
 <section class="about-content">
     <div class="about-section">
-        <h2>What is CourtNotes?</h2>
-        <p>
-            CourtNotes is the running commentary of my career - raw notes, honest rants, and practical lessons from
-            product design, hackathons, and community leadership. Each post keeps me accountable to building in public
-            and opens the door for future collaborators.
-        </p>
-        <p>
-            Expect dispatches on software craft, startup execution, and why Africa-focused products need context-aware
-            tooling. If you see an experiment here, it probably shipped in a sprint elsewhere.
-        </p>
+        <h2>What I'm Doing Now</h2>
+        <ul>
+            <li>Building <strong>AgriLease</strong> and growing <strong>DOT</strong> — turning early traction into something that lasts</li>
+            <li>Developing <strong>DLM</strong>, a digital lifestyle-medicine platform currently running a live pilot</li>
+            <li>Going deep on systems design and scalable software architecture</li>
+            <li>Writing more consistently here on CourtNotes — and actually hitting publish</li>
+        </ul>
     </div>
 
     <div class="about-section">
-        <h2>Lead, Build, Share</h2>
+        <h2>A Few Things About Me</h2>
         <p>
-            I lead the Proxyon team on AgriLease while also serving as the Tech Lead for GDG on Campus at my university.
-            Coaching peers, running workshops, and refining pitches are as core to my routine as pull requests.
+            When I'm not building something, I'm usually plotting how to build it bigger, or thinking
+            about tech that actually moves the needle back home. Outside of that, you'll catch me
+            reworking a pitch deck, falling down a random research rabbit hole, or with something
+            looping in my ears.
         </p>
-        <p>
-            Recent projects span React Native (TypeScript), React + Vite, Tailwind CSS, Firebase, and Eleventy. Clean UI,
-            scalable architecture, and functionality-first decisions keep every build shippable.
-        </p>
-    </div>
 
-    <div class="about-gallery">
-        <img src="https://placehold.co/600x400/f2f2f7/1c1c1e?text=Coding+Setup" alt="Desk setup with laptop and notebook">
-        <img src="https://placehold.co/600x400/f2f2f7/1c1c1e?text=Work+in+Progress" alt="Whiteboard sketches for AgriLease flows">
+        <div class="about-gallery">
+            <img src="https://placehold.co/600x400/f2f2f7/1c1c1e?text=Coding+Setup" alt="Desk setup with laptop and notebook">
+            <img src="https://placehold.co/600x400/f2f2f7/1c1c1e?text=Work+in+Progress" alt="Whiteboard sketches for AgriLease flows">
+        </div>
     </div>
 
     <div class="about-section">
-        <h2>Beyond the Keyboard</h2>
+        <h2>Why I Write</h2>
         <p>
-            Long-term, I'm chasing a Forbes Africa 30 Under 30 slot while staying grounded in useful tech. When I'm not
-            prototyping, you'll catch me refining product decks or looping Kendrick Lamar, J. Cole, Sjava, Nasty C, and A-Reece.
+            The internet has no shortage of polished success stories — the highlight reel where
+            everything worked out and the founder always knew it would. I find the in-between far
+            more interesting: the wrong turns, the experiments that flopped, the late-night
+            debugging, and the occasional win that makes it all worth it.
+        </p>
+        <p>
+            Writing is also how I think things through. Putting a problem into words usually shows me
+            where my understanding is thin — so even if a post helps no one else, it's already done
+            its job for me. If it happens to help you too, even better.
         </p>
     </div>
 
     <div class="about-apple-music" data-source="apple-music">
-        <h2>Recently Played on Apple Music</h2>
-        {% if music.length %}
-        <div class="apple-music-grid">
-            {% for track in music %}
-            <a class="apple-music-card" href="{{ track.url }}" target="_blank" rel="noopener">
-                <img src="{{ track.artwork }}" width="300" height="300" loading="lazy" alt="Album artwork for {{ track.name }}">
-                <h3>{{ track.name }}</h3>
-                <p>{{ track.artist }}</p>
-            </a>
-            {% endfor %}
-        </div>
-        {% else %}
-        <p class="apple-music-note">
-            Nothing to show right now — recently played tracks appear here once the Apple Music token is configured and the next build runs.
+        <h2>On Apple Music</h2>
+        <p class="apple-music-intro">
+            Kendrick Lamar, Kanye West, Chris Brown, Cassper Nyovest, and JAŸ-Z stay on heavy rotation — and here's
+            what that actually looks like in real time.
         </p>
+
+        <div class="apple-music-playlists">
+        <div class="apple-music-playlist">
+            <div class="apple-music-playlist-head">
+                <h3>Recently Played</h3>
+                <p>The last few tracks I've had on.</p>
+            </div>
+            {% if music.recent.length %}
+            <ol class="apple-music-tracklist">
+                {% for track in music.recent %}
+                <li>
+                    <a class="apple-music-track" href="{{ track.url }}" target="_blank" rel="noopener">
+                        <img src="{{ track.artwork }}" width="56" height="56" loading="lazy" alt="Album artwork for {{ track.name }}">
+                        <span class="apple-music-track-info">
+                            <span class="apple-music-track-name">{{ track.name }}</span>
+                            <span class="apple-music-track-artist">{{ track.artist }}</span>
+                        </span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+            {% else %}
+            <p class="apple-music-note">
+                Nothing to show right now — recently played tracks appear here once the Apple Music token is configured and the next build runs.
+            </p>
+            {% endif %}
+        </div>
+
+        {% if music.heavyRotation %}
+        <div class="apple-music-playlist">
+            <div class="apple-music-playlist-head">
+                {% if music.heavyRotation.artwork %}
+                <img class="apple-music-playlist-cover" src="{{ music.heavyRotation.artwork }}" width="64" height="64" loading="lazy" alt="{{ music.heavyRotation.name }} playlist cover">
+                {% endif %}
+                <div>
+                    <h3>{{ music.heavyRotation.name }}</h3>
+                    <p>
+                        My on-repeat playlist, auto-built by Apple Music.
+                        {% if music.heavyRotation.url %}<a href="{{ music.heavyRotation.url }}" target="_blank" rel="noopener">Open in Apple Music →</a>{% endif %}
+                    </p>
+                </div>
+            </div>
+            <ol class="apple-music-tracklist">
+                {% for track in music.heavyRotation.tracks %}
+                <li>
+                    <a class="apple-music-track" href="{{ track.url }}" target="_blank" rel="noopener">
+                        <img src="{{ track.artwork }}" width="56" height="56" loading="lazy" alt="Album artwork for {{ track.name }}">
+                        <span class="apple-music-track-info">
+                            <span class="apple-music-track-name">{{ track.name }}</span>
+                            <span class="apple-music-track-artist">{{ track.artist }}</span>
+                        </span>
+                    </a>
+                </li>
+                {% endfor %}
+            </ol>
+        </div>
         {% endif %}
+        </div>
+    </div>
+
+    <div class="about-section">
+        <h2>Stay Connected</h2>
+        <p>
+            I'm scattered across a few places. Come say hi, follow along, or just lurk — all welcome.
+        </p>
+        <div class="about-socials">
+            <a class="about-social" href="https://github.com/CourtneyFradreck" target="_blank" rel="noopener">GitHub</a>
+            <a class="about-social" href="https://www.linkedin.com/in/courtney-fradreck/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="about-social" href="https://twitter.com/CourtneyFraddy" target="_blank" rel="noopener">X</a>
+            <a class="about-social" href="mailto:courtaga@gmail.com">Email</a>
+            <a class="about-social" href="/feed.xml">RSS</a>
+        </div>
     </div>
 
     <div class="about-cta">
         <img src="https://courtnotes.netlify.app/assets/blog-images/img-20250125-wa0038~2-1-.jpg" alt="Call to connect banner">
-        <h2>Come Along for the Ride</h2>
+        <h2>Check Out the Blog</h2>
         <p>
-            If you're into real talk about startups, engineering, and community building, you're in the right place. Dive
-            into the blog and say hi - I answer every thoughtful DM.
+            That's the tour. If any of this resonates — startups, engineering, community, or the
+            honest mess in between — the blog is where it all lives. Dive in, and feel free to say hi.
+            I answer every thoughtful message.
         </p>
-        <button onclick="window.location.href='/blog/'">Check Out the Blog</button>
+        <button onclick="window.location.href='/blog/'">Read the Blog</button>
     </div>
 </section>
-
-

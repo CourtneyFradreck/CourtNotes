@@ -34,6 +34,7 @@ description: "CourtNotes — a personal blog by Courtney Fradreck covering softw
     
     <div class="featured-premium-grid">
         {%- for post in collections.featured | reverse -%}
+        {%- if loop.index <= 5 -%}
         <article class="premium-card">
             <a href="{{ post.url }}" class="premium-card-link">
                 <div class="premium-card-image">
@@ -53,6 +54,7 @@ description: "CourtNotes — a personal blog by Courtney Fradreck covering softw
                 </div>
             </a>
         </article>
+        {%- endif -%}
         {%- endfor -%}
     </div>
 </section>

@@ -812,7 +812,7 @@ footer {
 
 .featured-premium-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
 }
 
@@ -926,5 +926,20 @@ footer {
   
   .hero-premium-actions {
     justify-content: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .hero-premium {
+    padding: 0 1rem;
+    margin: 3rem auto;
+  }
+  .featured-premium {
+    padding: 0 1rem;
+    margin: 4rem auto;
+  }
+  .premium-card-content {
+    padding: 1.5rem;
   }
 }

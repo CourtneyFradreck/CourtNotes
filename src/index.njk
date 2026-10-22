@@ -26,35 +26,22 @@ description: "CourtNotes — a personal blog by Courtney Fradreck covering softw
     </div>
 </section>
 
-<section class="featured-premium" id="featured">
-    <div class="featured-premium-header">
-        <h2 class="section-title-premium">Featured Articles</h2>
-        <p class="section-subtitle-premium">Discover my latest hand-picked articles below.</p>
+<section class="featured-articles" id="featured">
+    <div class="featured-articles-header">
+        <h2>Featured Articles</h2>
+        <p>Discover my latest hand-picked featured articles below:</p>
     </div>
-    
-    <div class="featured-premium-grid">
-        {%- for post in collections.featured | reverse -%}
-        {%- if loop.index <= 5 -%}
-        <article class="premium-card">
-            <a href="{{ post.url }}" class="premium-card-link">
-                <div class="premium-card-image">
-                    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" loading="lazy">
-                </div>
-                <div class="premium-card-content">
-                    <time class="premium-card-date">{{ post.date | postDate }}</time>
-                    <h3 class="premium-card-title">{{ post.data.title }}</h3>
-                    <p class="premium-card-description">{{ post.data.description }}</p>
-                    <span class="premium-card-readmore">
-                        Continue Reading 
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                            <polyline points="12 5 19 12 12 19"></polyline>
-                        </svg>
-                    </span>
-                </div>
-            </a>
-        </article>
-        {%- endif -%}
-        {%- endfor -%}
+    {%- for post in collections.featured | reverse -%}
+    <div class="featured-article">
+        <div class="featured-article-text">
+            <h3>{{ post.data.title }}</h3>
+            <p class="article-meta">{{ post.date | postDate }}</p>
+            <p>{{ post.data.description }}</p>
+            <button onclick="window.location.href='{{ post.url }}'">Continue Reading</button>
+        </div>
+        <div class="featured-article-img">
+            <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="400" height="225" loading="lazy">
+        </div> 
     </div>
+    {%- endfor -%}
 </section>

@@ -1,14 +1,18 @@
-<header>
-    <div class="logo">
-        <img src="/assets/logo.svg" alt="CourtNotes Logo">
-        <p>CourtNotes</p>
-    </div>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/blog/">Blog</a></li>
-            <li>
+<header class="site-header">
+    <div class="header-inner">
+        <a href="/" class="logo" aria-label="CourtNotes Home">
+            <img src="/assets/logo.svg" alt="CourtNotes Logo" width="30" height="30">
+            <span>CourtNotes</span>
+        </a>
+        <div class="header-right">
+            <nav id="mobile-nav" class="nav-menu" aria-label="Main Navigation">
+                <ul class="nav-list">
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/about/" class="nav-link">About</a></li>
+                    <li><a href="/blog/" class="nav-link">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
                 <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
                     <span class="light-icon">
                         <!-- Sun Icon -->
@@ -31,7 +35,63 @@
                         </svg>
                     </span>
                 </button>
-            </li>
-        </ul>
-    </nav>
+                <button id="mobile-menu-toggle" class="hamburger-btn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </div>
+    </div>
 </header>
+
+<script>
+(function() {
+    const menuToggle = document.getElementById('mobile-menu-toggle');
+    const navMenu = document.getElementById('mobile-nav');
+    if (!menuToggle || !navMenu) return;
+
+    function toggleMenu(open) {
+        const isOpen = open !== undefined ? open : menuToggle.getAttribute('aria-expanded') !== 'true';
+        menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        if (isOpen) {
+            navMenu.classList.add('is-open');
+        } else {
+            navMenu.classList.remove('is-open');
+        }
+    }
+
+    menuToggle.addEventListener('click', function(e) {
+        e.stopPropagation();
+        toggleMenu();
+    });
+
+    // Close when clicking nav links
+    navMenu.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+            toggleMenu(false);
+        });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(e) {
+        if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+            toggleMenu(false);
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            toggleMenu(false);
+        }
+    });
+
+    // Reset on window resize
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 768) {
+            toggleMenu(false);
+        }
+    });
+})();
+</script>

@@ -1,93 +1,49 @@
 ---
-title : Home
+title: Home
 layout: 'base.njk'
 description: "CourtNotes — a personal blog by Courtney Fradreck covering software engineering, startup building, and learning in public from Zimbabwe."
 ---
 
-   
+<section class="hero-premium">
+    <div class="hero-premium-content">
+        <h1 class="hero-premium-title">Welcome to the genius realm of my thoughts.</h1>
+        <p class="hero-premium-subtitle">
+            Yo, this is where I drop the truth and the fire—you know, the art of living larger.
+            I bring you raw, unfiltered wisdom from the mind of a creative visionary.
+            <br><br>
+            I basically use this to yap/rant about shit that I like, or shit I don't like. Whatever. IDK.
+            I share honest thoughts, spontaneous rants, and a few unexpected insights about life. Enjoy the ride!
+        </p>
+        <div class="hero-premium-actions">
+            <a href="/blog" class="btn-premium primary">All Rants</a>
+            <a href="#featured" class="btn-premium secondary">Favourite Rants</a>
+        </div>
+    </div>
+    <div class="hero-premium-visual">
+        <div class="image-wrapper">
+            <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster">
+        </div>
+    </div>
+</section>
 
-
-<!-- Add this JavaScript to a separate file (e.g., theme.js) -->
-<script>
-// Check for saved theme preference, otherwise use system preference
-function getPreferredTheme() {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-        return savedTheme;
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-}
-
-// Function to set theme
-function setTheme(theme) {
-    if (theme === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-        document.documentElement.removeAttribute('data-theme');
-    }
-    localStorage.setItem('theme', theme);
-}
-
-// Initialize theme
-document.addEventListener('DOMContentLoaded', () => {
-    // Set initial theme
-    setTheme(getPreferredTheme());
-
-    // Add toggle button listener
-    const toggleButton = document.getElementById('theme-toggle');
-    toggleButton.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        setTheme(newTheme);
-    });
-
-    // Listen for system theme changes
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-        if (!localStorage.getItem('theme')) {  // Only if user hasn't manually set theme
-            setTheme(e.matches ? 'dark' : 'light');
-        }
-    });
-});
-</script>
- 
-        <section class="hero">
-            <div class="hero-text">
-                <h2>Welcome to the genius realm of my thoughts!</h2>
-                <p>
-                    Yo, this is where I drop the truth and the fire—you know, the art of living larger.
-                    I bring you raw, unfiltered wisdom from the mind of a creative visionary.
-                    <br>
-                    Step up and feel the passion; everything you hear is a masterpiece in the making.
-                    <br>
-                    I basically use this to yap/rant about shit that I like, or shit I don't like. Whatever. IDK.
-                    I share honest thoughts, spontaneous rants, and a few unexpected insights about life. Enjoy the ride!
-                </p>
-                <div class="hero-btns">
-                    <button type="button">Favourite Rants</button>
-                    <button type="button">All Rants</button>
-                </div>
-                </div>
-            </div>
-            <div class="hero-img">
-                <img src="/assets/blog-images/welcome2zim.jpg" alt="Scary Zim Poster" width="500">
-            </div>
-        </section>
-        <section class="featured-articles">
-            <div class="featured-articles-header">
-                <h2>Featured Articles</h2>
-                <p>Discover my latest hand-picked featured articles below:</p>
-            </div>
-            {%- for post in collections.featured | reverse -%}
-            <div class="featured-article">
-                <div class="featured-article-text">
-                    <h3>{{ post.data.title }}</h3>
-                    <p class="article-meta">{{ post.date | postDate }}</p>
-                    <p>{{ post.data.description }}</p>
-                    <button onclick="window.location.href='{{ post.url }}'">Continue Reading</button>
-                </div>
-                <div class="featured-article-img">
-                    <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="400" height="225" loading="lazy">
-                </div> 
-            </div>
-            {%- endfor -%}
-        </section>
+<section class="featured-articles" id="featured">
+    <div class="featured-articles-header">
+        <h2>Featured Articles</h2>
+        <p>Discover my latest hand-picked featured articles below:</p>
+    </div>
+    {%- for post in collections.featured | reverse -%}
+    {%- if loop.index <= 5 -%}
+    <div class="featured-article">
+        <div class="featured-article-text">
+            <h3>{{ post.data.title }}</h3>
+            <p class="article-meta">{{ post.date | postDate }}</p>
+            <p>{{ post.data.description }}</p>
+            <button onclick="window.location.href='{{ post.url }}'">Continue Reading</button>
+        </div>
+        <div class="featured-article-img">
+            <img src="{{ post.data.image }}" alt="{{ post.data.imageAlt }}" width="400" height="225" loading="lazy">
+        </div> 
+    </div>
+    {%- endif -%}
+    {%- endfor -%}
+</section>

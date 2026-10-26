@@ -3,13 +3,13 @@ title: "Building CASE: The First Piece of ALFRED"
 description: How a thought about automating software development rituals turned
   into the first module of my personal AI assistant.
 author: Courtney Fradreck
-date: 2026-10-23T09:33:00.000+02:00
+date: 2026-10-26T09:33:00.000+02:00
 tags:
   - post
   - featured
 image: /assets/blog-images/case/case.png
-imageAlt: CASE's cover image. A minimal, dark-themed visual introducing CASE as
-  the first module of ALFRED.
+imageAlt: A glowing blue and gold brain surrounded by circular interface graphics,
+  with CASE written beneath it.
 ---
 
 I've wanted to build ALFRED for a while.
@@ -87,7 +87,7 @@ That might not sound particularly ambitious, but it gave me something much more 
     <img src="/assets/blog-images/case/case_architecture_diagram.svg" alt="CASE architecture: GitHub, NEXT.md and Telegram feed into case-core, with n8n handling orchestration, PostgreSQL storing state, and Gemini generating the morning brief." width="680" height="400" loading="lazy">
 </p>
 
-As of 22 October 2026, CASE runs as a self-hosted system deployed through Docker Compose on Dokploy. Her stack includes Node.js 22, TypeScript, Hono, PostgreSQL 16, n8n, Telegram, and Google's Gemini model.
+As of 26 October 2026, CASE runs as a self-hosted system deployed through Docker Compose on Dokploy. Her stack includes Node.js 22, TypeScript, Hono, PostgreSQL 16, n8n, Telegram, and Google's Gemini model.
 
 Each component has a specific responsibility.
 
@@ -185,7 +185,7 @@ That is part of the appeal of building in public: the project can show not just 
 
 ## What comes next?
 
-As I write this on 22 October 2026, Milestone 3 is in production testing. The next major milestone is M4, which will extend CASE beyond software activity.
+As I write this on 26 October 2026, Milestone 3 is in production testing. The next major milestone is M4, which will extend CASE beyond software activity.
 
 ### M4: Accounting for work that GitHub cannot see
 
@@ -256,4 +256,4 @@ And that's exactly where I wanted to start.
 - **Current milestone:** M3, Intent, in production testing
 - **Next milestone:** M4, non-code activity logging and evening check-ins
 
-_This post describes CASE's state and roadmap as of 22 October 2026. Features under testing or planned for future milestones are identified as such and should not be interpreted as completed functionality._
+_This post describes CASE's state and roadmap as of 26 October 2026. Features under testing or planned for future milestones are identified as such and should not be interpreted as completed functionality._

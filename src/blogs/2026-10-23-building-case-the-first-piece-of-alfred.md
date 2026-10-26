@@ -7,11 +7,10 @@ date: 2026-10-23T09:33:00.000+02:00
 tags:
   - post
   - featured
-image: https://wallpapercave.com/wp/wp14129872.png
+image: /assets/blog-images/case/case.png
 imageAlt: CASE's cover image. A minimal, dark-themed visual introducing CASE as
   the first module of ALFRED.
 ---
-\[IMAGE PLACEHOLDER: CASE's cover image. A minimal, dark-themed visual introducing CASE as the first module of ALFRED.]
 
 I've wanted to build ALFRED for a while.
 
@@ -23,7 +22,18 @@ The creator argued that one of the most valuable AI projects a software engineer
 
 His argument was provocative, and I wouldn't agree that Agile methodology or Scrum Masters are inherently useless. Good planning, coordination, and communication matter, particularly when you're working with a team. But the underlying question stuck with me: **How much of the overhead surrounding software development could we automate so that engineers can spend more time engineering?**
 
-\[VIDEO PLACEHOLDER: Embed the original Instagram Reel that inspired this project, subject to the creator's embedding permissions.]
+<figure class="reel-embed">
+    <div class="reel-embed__media">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DHG5m-YuwcY/" data-instgrm-version="14">
+            <a href="https://www.instagram.com/reel/DHG5m-YuwcY/" target="_blank" rel="noopener noreferrer">Watch the original Reel on Instagram</a>
+        </blockquote>
+    </div>
+    <figcaption>
+        The Reel that inspired CASE.
+        <a href="https://www.instagram.com/reel/DHG5m-YuwcY/" target="_blank" rel="noopener noreferrer">Watch on Instagram</a>
+    </figcaption>
+</figure>
+<script async src="https://www.instagram.com/embed.js"></script>
 
 I had already been thinking about ALFRED. What I didn't have was a concrete first module to build.
 
@@ -49,9 +59,9 @@ I wanted to eliminate as much of that reconstruction as possible.
 
 Ideally, I wanted to begin my day with a useful answer to three questions:
 
-* Where did I leave off?
-* What needs my attention?
-* What should I focus on next?
+- Where did I leave off?
+- What needs my attention?
+- What should I focus on next?
 
 Not another dashboard to maintain. Not another task-management system requiring me to spend time updating it. Just a concise briefing assembled from the information my existing tools already contain.
 
@@ -61,7 +71,7 @@ That became CASE's first responsibility.
 
 \[IMAGE PLACEHOLDER: CASE's identity or logo, with the full name “Cognitive Assistant for Scheduling and Execution”.]
 
-CASE stands for **Cognitive Assistant for Scheduling and Execution**. The name was inspired by CASE, one of the robotic assistants in *Interstellar*.
+CASE stands for **Cognitive Assistant for Scheduling and Execution**. The name was inspired by CASE, one of the robotic assistants in _Interstellar_.
 
 She is also the first module of ALFRED, the larger personal AI assistant I intend to build one piece at a time.
 
@@ -75,7 +85,9 @@ That might not sound particularly ambitious, but it gave me something much more 
 
 ## How CASE works today
 
-\[IMAGE PLACEHOLDER: Architecture diagram showing GitHub, NEXT.md and Telegram feeding into case-core, with n8n handling orchestration, PostgreSQL storing state, and Gemini supporting the model-generated brief.]
+<p>
+    <img src="/assets/blog-images/case/case_architecture_diagram.svg" alt="CASE architecture: GitHub, NEXT.md and Telegram feed into case-core, with n8n handling orchestration, PostgreSQL storing state, and Gemini generating the morning brief." width="680" height="400" loading="lazy">
+</p>
 
 As of 22 October 2026, CASE runs as a self-hosted system deployed through Docker Compose on Dokploy. Her stack includes Node.js 22, TypeScript, Hono, PostgreSQL 16, n8n, Telegram, and Google's Gemini model.
 
@@ -105,7 +117,10 @@ Milestone 1 established the rule-based morning brief. Milestone 2 introduced the
 
 ### What she actually does now
 
-\[IMAGE PLACEHOLDER: A screenshot of a real CASE morning brief in Telegram, with sensitive information redacted.]
+<picture class="morning-brief">
+    <source media="(max-width: 768px)" srcset="/assets/blog-images/case/case_morning_brief_mobile.jpg" type="image/jpeg" width="1080" height="2496">
+    <img src="/assets/blog-images/case/case_morning_brief_desktop.png" alt="CASE's morning brief in Telegram, showing recent activity, items needing attention, suggested focus tasks, and response buttons." width="878" height="702" loading="lazy" decoding="async">
+</picture>
 
 CASE's current capabilities go beyond summarising yesterday's commits.
 
@@ -237,9 +252,9 @@ And that's exactly where I wanted to start.
 
 **Project links**
 
-* **Source code:** [github.com/CourtneyFradreck/case-ai](https://github.com/CourtneyFradreck/case-ai)
-* **Current development branch:** [feat/m3-intent](https://github.com/CourtneyFradreck/case-ai/tree/feat/m3-intent)
-* **Current milestone:** M3, Intent, in production testing
-* **Next milestone:** M4, non-code activity logging and evening check-ins
+- **Source code:** [github.com/CourtneyFradreck/case-ai](https://github.com/CourtneyFradreck/case-ai)
+- **Current development branch:** [feat/m3-intent](https://github.com/CourtneyFradreck/case-ai/tree/feat/m3-intent)
+- **Current milestone:** M3, Intent, in production testing
+- **Next milestone:** M4, non-code activity logging and evening check-ins
 
-*This post describes CASE's state and roadmap as of 22 October 2026. Features under testing or planned for future milestones are identified as such and should not be interpreted as completed functionality.*
+_This post describes CASE's state and roadmap as of 22 October 2026. Features under testing or planned for future milestones are identified as such and should not be interpreted as completed functionality._

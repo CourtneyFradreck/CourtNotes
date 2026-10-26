@@ -418,6 +418,18 @@ a.link {
   margin: 0 auto;
 }
 
+.case-demo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: min(36rem, 75svh);
+    margin: 2.5rem auto;
+    object-fit: contain;
+    background-color: #000000;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 /* Keep the Reel compact, including Instagram's generated iframe. */
 .reel-embed {
     width: min(100%, 22.5rem);

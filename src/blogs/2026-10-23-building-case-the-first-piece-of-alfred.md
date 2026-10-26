@@ -69,8 +69,6 @@ That became CASE's first responsibility.
 
 ## Meet CASE
 
-\[IMAGE PLACEHOLDER: CASE's identity or logo, with the full name “Cognitive Assistant for Scheduling and Execution”.]
-
 CASE stands for **Cognitive Assistant for Scheduling and Execution**. The name was inspired by CASE, one of the robotic assistants in _Interstellar_.
 
 She is also the first module of ALFRED, the larger personal AI assistant I intend to build one piece at a time.
@@ -162,7 +160,10 @@ That boundary is intentional. I want to establish reliable context and useful de
 
 ## The engineering lesson: building an assistant is more than connecting an LLM
 
-\[VIDEO PLACEHOLDER: A short screen recording showing CASE generating a morning brief, presenting focus suggestions, and responding to a selection in Telegram.]
+<video class="case-demo" controls playsinline preload="metadata" aria-label="CASE demo: generating a morning brief, suggesting focus tasks, and responding to a selection in Telegram">
+    <source src="/assets/videos/case.mp4" type="video/mp4">
+    <a href="/assets/videos/case.mp4">Watch the CASE demo</a>.
+</video>
 
 One of the most interesting parts of this project has been discovering how much work exists outside the actual AI call.
 
@@ -183,8 +184,6 @@ I'm still testing the current milestone in production. The goal is not to claim 
 That is part of the appeal of building in public: the project can show not just what works, but also how an idea becomes a system through testing, iteration, and engineering decisions.
 
 ## What comes next?
-
-\[IMAGE PLACEHOLDER: A roadmap graphic showing M0 through M5, distinguishing completed milestones, the current M3 production trial, and planned work.]
 
 As I write this on 22 October 2026, Milestone 3 is in production testing. The next major milestone is M4, which will extend CASE beyond software activity.
 

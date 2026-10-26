@@ -5,7 +5,7 @@ const siteMetadata = {
     title: "CourtNotes",
     description: "A personal note-taking site.",
     author: "Courtney Fradreck",
-    siteUrl: "https://courtnotes.netlify.app"
+    siteUrl: "https://blog.courtneyis.me"
 };
 
 module.exports = function (eleventyConfig) {

@@ -340,6 +340,19 @@ nav ul li a[aria-current="page"] {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+.morning-brief {
+    display: block;
+    margin: 2.5rem auto;
+}
+
+.morning-brief img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -405,6 +418,69 @@ a.link {
   margin: 0 auto;
 }
 
+.case-demo {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: min(36rem, 75svh);
+    margin: 2.5rem auto;
+    object-fit: contain;
+    background-color: #000000;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep the Reel compact, including Instagram's generated iframe. */
+.reel-embed {
+    width: min(100%, 22.5rem);
+    max-width: 45svh;
+    margin: 2rem auto;
+}
+
+.reel-embed__media {
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Instagram sets inline dimensions when it replaces the blockquote. */
+.reel-embed__media .instagram-media {
+    display: block;
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.reel-embed__media blockquote {
+    padding: 1.25rem;
+    background-color: var(--tertiary-color);
+    font-style: normal;
+}
+
+.reel-embed figcaption {
+    margin-top: 0.75rem;
+    color: var(--text-secondary);
+    font-size: 0.8125rem;
+    line-height: 1.6;
+    text-align: center;
+    text-wrap: balance;
+}
+
+.reel-embed a {
+    color: var(--accent-yellow-text);
+    text-underline-offset: 3px;
+}
+
+.reel-embed figcaption a {
+    display: inline-block;
+}
+
 footer {
   background-color: var(--primary-color);
   color: var(--text-secondary);
@@ -421,6 +497,10 @@ footer {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .morning-brief {
+        max-width: 24rem;
+    }
+
   :root {
     --header-height: 56px;
   }
